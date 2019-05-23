@@ -58,6 +58,17 @@ view: mrr_aggregated {
     sql: IFF(${TABLE}."GROSS_MRR" > 0,'Yes','No') ;;
   }
 
+  measure: customer_count {
+    type: count_distinct
+    sql: ${TABLE}."COMPANY_ID";;
+    view_label: ""
+    filters: {
+      field: customer_active
+      value: "Yes"
+    }
+    drill_fields: [company.company_name,gross_mrr,gross_mrr]
+  }
+
   measure: gross_mrr {
     label: "Gross MRR"
     type: sum
@@ -89,16 +100,5 @@ view: mrr_aggregated {
   measure: count {
     type: count
     drill_fields: [mrr_aggregated_id]
-  }
-
-  measure: customer_count {
-    type: count_distinct
-    sql: ${TABLE}."COMPANY_ID";;
-    view_label: ""
-    filters: {
-      field: customer_active
-      value: "true"
-    }
-    drill_fields: [company.company_name,gross_mrr,gross_mrr]
   }
 }
