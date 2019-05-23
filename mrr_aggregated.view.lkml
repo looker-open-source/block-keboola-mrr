@@ -16,6 +16,7 @@ view: mrr_aggregated {
   measure: count_change {
     type: sum
     sql: ${TABLE}."COUNT_CHANGE" ;;
+    drill_fields: [company.company,gross_action]
   }
 
   dimension: currency {
