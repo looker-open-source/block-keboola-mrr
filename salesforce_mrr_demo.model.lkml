@@ -1,4 +1,4 @@
-connection: "salesforce_mrr_demo"
+connection: "mrr_salesforce_demo"
 
 # include all the views
 include: "*.view"
