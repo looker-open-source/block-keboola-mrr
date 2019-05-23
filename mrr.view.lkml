@@ -1,5 +1,6 @@
 view: mrr {
   sql_table_name: MRR ;;
+  label: "MRR"
 
   dimension: mrr_id {
     primary_key: yes

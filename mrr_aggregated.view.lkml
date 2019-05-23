@@ -1,4 +1,5 @@
 view: mrr_aggregated {
+  label: "MRR Aggregated"
   sql_table_name: MRR_AGGREGATED ;;
 
   dimension: mrr_aggregated_id {
@@ -43,6 +44,7 @@ view: mrr_aggregated {
   }
 
   dimension: ARR_bucket {
+    label: "ARR Bucket"
     type: tier
     tiers: [25000,50000,75000,100000]
     sql: ${TABLE}."GROSS_MRR"*12 ;;
@@ -57,24 +59,28 @@ view: mrr_aggregated {
   }
 
   measure: gross_mrr {
+    label: "Gross MRR"
     type: sum
     sql: ${TABLE}."GROSS_MRR" ;;
     drill_fields: [company.company,gross_mrr]
   }
 
   measure: gross_mrr_change {
+    label: "Gross MRR Change"
     type: sum
     sql: ${TABLE}."GROSS_MRR_CHANGE" ;;
     drill_fields: [company.company,gross_mrr_change]
   }
 
   measure: previous_gross_mrr {
+    label: "Previous Gross MRR"
     type: sum
     sql: ${TABLE}."PREVIOUS_GROSS_MRR" ;;
     drill_fields: [company.company,previous_gross_mrr]
   }
 
   measure: gross_mrr_AVG {
+    label: "Gross MRR AVG"
     type: average
     sql: ${TABLE}."GROSS_MRR" ;;
     drill_fields: [company.company_name,gross_mrr_AVG]
@@ -83,5 +89,16 @@ view: mrr_aggregated {
   measure: count {
     type: count
     drill_fields: [mrr_aggregated_id]
+  }
+
+  measure: customer_count {
+    type: count_distinct
+    sql: ${TABLE}."COMPANY_ID";;
+    view_label: ""
+    filters: {
+      field: customer_active
+      value: "true"
+    }
+    drill_fields: [company.company_name,gross_mrr,gross_mrr]
   }
 }
