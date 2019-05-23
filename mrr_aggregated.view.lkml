@@ -31,6 +31,7 @@ view: mrr_aggregated {
       date,
       week,
       month,
+      month_name,
       quarter,
       year
     ]
