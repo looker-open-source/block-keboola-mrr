@@ -79,7 +79,7 @@ view: opportunity {
   measure: opportunity_value {
     type: sum
     sql: ${TABLE}."OPPORTUNITY_VALUE" ;;
-    value_format: "# ### ###"
+    value_format: "#,###,###"
   }
 
   dimension: stage {
