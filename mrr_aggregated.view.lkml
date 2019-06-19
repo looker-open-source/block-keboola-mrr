@@ -75,6 +75,7 @@ view: mrr_aggregated {
     label: "Gross MRR"
     type: sum
     sql: ${TABLE}."GROSS_MRR" ;;
+    value_format: "#,##0"
     drill_fields: [company.company,gross_mrr]
   }
 
@@ -82,6 +83,7 @@ view: mrr_aggregated {
     label: "Gross MRR Change"
     type: sum
     sql: ${TABLE}."GROSS_MRR_CHANGE" ;;
+    value_format: "#,##0"
     drill_fields: [company.company,gross_mrr_change]
   }
 
@@ -89,6 +91,7 @@ view: mrr_aggregated {
     label: "Previous Gross MRR"
     type: sum
     sql: ${TABLE}."PREVIOUS_GROSS_MRR" ;;
+    value_format: "#,##0"
     drill_fields: [company.company,previous_gross_mrr]
   }
 
@@ -96,6 +99,7 @@ view: mrr_aggregated {
     label: "Gross MRR AVG"
     type: average
     sql: ${TABLE}."GROSS_MRR" ;;
+    value_format: "#,##0"
     drill_fields: [company.company_name,gross_mrr_AVG]
   }
 
