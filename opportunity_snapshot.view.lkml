@@ -23,6 +23,7 @@ view: opportunity_snapshot {
   measure: opportunity_value {
     type: sum_distinct
     sql: ${TABLE}."OPPORTUNITY_VALUE" ;;
+    value_format: "#,##0"
   }
 
   dimension: opportunity_value_change {
@@ -33,6 +34,7 @@ view: opportunity_snapshot {
   measure: previous_opportunity_value {
     type: sum_distinct
     sql: ${TABLE}."PREVIOUS_OPPORTUNITY_VALUE" ;;
+    value_format: "#,##0"
   }
 
   dimension_group: snapshot {
