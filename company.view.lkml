@@ -7,10 +7,16 @@ view: company {
     sql: ${TABLE}."COMPANY_ID" ;;
   }
 
+  dimension: company_url {
+    type: string
+    # hidden: yes
+    sql:  'https://keboola.lightning.force.com/lightning/r/Account' || ${TABLE}."COMPANY_ID" || '/view' ;;
+  }
+
   dimension: company {
     type: string
     sql: ${TABLE}."COMPANY" ;;
-    html: <a href={{company.website}} target="_blank"><font color="blue">{{ value }}</font></a> ;;
+    html: <a href={{company_url}} target="_blank"><font color="blue">{{ value }}</font></a> ;;
   }
 
   dimension_group: date_created {
@@ -31,6 +37,7 @@ view: company {
   dimension: website {
     type: string
     sql: ${TABLE}."WEBSITE" ;;
+    html: <a href={{website}} target="_blank"><font color="blue">{{ value }}</font></a> ;;
   }
 
   measure: count {

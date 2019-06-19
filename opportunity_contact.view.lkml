@@ -1,5 +1,5 @@
 view: opportunity_contact {
-  sql_table_name: WORKSPACE_506957988.OPPORTUNITY_CONTACT ;;
+  sql_table_name: OPPORTUNITY_CONTACT ;;
 
   dimension: opportunity_contact_id {
     primary_key: yes

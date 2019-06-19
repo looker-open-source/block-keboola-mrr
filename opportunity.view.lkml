@@ -5,6 +5,13 @@ view: opportunity {
     primary_key: yes
     type: string
     sql: ${TABLE}."OPPORTUNITY_ID" ;;
+    html: <a href={{opportunity_url}} target="_blank"><font color="blue">{{ value }}</font></a> ;;
+  }
+
+  dimension: opportunity_url {
+    type: string
+    # hidden: yes
+    sql:  'https://keboola.lightning.force.com/lightning/r/Opportunity' || ${TABLE}."OPPORTUNITY_ID" || '/view' ;;
   }
 
   dimension_group: close {
@@ -81,6 +88,6 @@ view: opportunity {
 
   measure: count {
     type: count
-    drill_fields: [company.company_name, opportunity, lead_source, employee.employee, created_date, opportunity_value]
+    drill_fields: [company.company_name, opportunity_id, lead_source, employee.employee, created_date, opportunity_value]
   }
 }

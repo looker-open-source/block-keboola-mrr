@@ -7,6 +7,12 @@ view: contract {
     sql: ${TABLE}."CONTRACT_ID" ;;
   }
 
+  dimension: contract_url {
+    type: string
+    # hidden: yes
+    sql:  'https://keboola.lightning.force.com/lightning/r/Order' || ${TABLE}."CONTRACT_ID" || '/view' ;;
+  }
+
   dimension: company_id {
     type: string
     # hidden: yes
@@ -47,6 +53,7 @@ view: contract {
   dimension: contract_number {
     type: string
     sql: ${TABLE}."CONTRACT_NUMBER" ;;
+    html: <a href={{contract_url}} target="_blank"><font color="blue">{{ value }}</font></a> ;;
   }
 
   dimension_group: contract_start {
