@@ -159,56 +159,6 @@
     col: 0
     width: 12
     height: 7
-  - title: New Opportunities
-    name: New Opportunities
-    model: salesforce_mrr_demo
-    explore: opportunity
-    type: looker_column
-    fields: [opportunity.count, opportunity.lead_source, opportunity.created_month]
-    pivots: [opportunity.lead_source]
-    fill_fields: [opportunity.created_month]
-    sorts: [opportunity.created_month desc, opportunity.lead_source]
-    limit: 500
-    color_application:
-      collection_id: legacy
-      palette_id: santa_cruz
-      options:
-        steps: 5
-    x_axis_gridlines: false
-    y_axis_gridlines: true
-    show_view_names: false
-    show_y_axis_labels: true
-    show_y_axis_ticks: true
-    y_axis_tick_density: default
-    y_axis_tick_density_custom: 5
-    show_x_axis_label: true
-    show_x_axis_ticks: true
-    y_axis_scale_mode: linear
-    x_axis_reversed: false
-    y_axis_reversed: false
-    plot_size_by_field: false
-    trellis: ''
-    stacking: normal
-    limit_displayed_rows: false
-    legend_position: center
-    series_types: {}
-    point_style: none
-    show_value_labels: true
-    label_density: 25
-    x_axis_scale: auto
-    y_axis_combined: true
-    ordering: none
-    show_null_labels: false
-    show_totals_labels: true
-    show_silhouette: false
-    totals_color: "#353b49"
-    listen:
-      Date: opportunity.created_date
-      Lead Source: opportunity.lead_source
-    row: 15
-    col: 0
-    width: 12
-    height: 7
   - title: New Opportunities (Total)
     name: New Opportunities (Total)
     model: salesforce_mrr_demo
@@ -303,56 +253,6 @@
     col: 12
     width: 12
     height: 2
-  - title: New Opportunities Value
-    name: New Opportunities Value
-    model: salesforce_mrr_demo
-    explore: opportunity
-    type: looker_column
-    fields: [opportunity.lead_source, opportunity.created_month, opportunity.opportunity_value]
-    pivots: [opportunity.lead_source]
-    fill_fields: [opportunity.created_month]
-    sorts: [opportunity.created_month desc, opportunity.lead_source]
-    limit: 500
-    color_application:
-      collection_id: legacy
-      palette_id: santa_cruz
-      options:
-        steps: 5
-    x_axis_gridlines: false
-    y_axis_gridlines: true
-    show_view_names: false
-    show_y_axis_labels: true
-    show_y_axis_ticks: true
-    y_axis_tick_density: default
-    y_axis_tick_density_custom: 5
-    show_x_axis_label: true
-    show_x_axis_ticks: true
-    y_axis_scale_mode: linear
-    x_axis_reversed: false
-    y_axis_reversed: false
-    plot_size_by_field: false
-    trellis: ''
-    stacking: normal
-    limit_displayed_rows: false
-    legend_position: center
-    series_types: {}
-    point_style: none
-    show_value_labels: true
-    label_density: 25
-    x_axis_scale: auto
-    y_axis_combined: true
-    ordering: none
-    show_null_labels: false
-    show_totals_labels: true
-    show_silhouette: false
-    totals_color: "#353b49"
-    listen:
-      Date: opportunity.created_date
-      Lead Source: opportunity.lead_source
-    row: 15
-    col: 12
-    width: 12
-    height: 7
   - title: New Contacts (Total)
     name: New Contacts (Total)
     model: salesforce_mrr_demo
@@ -516,59 +416,6 @@
     col: 12
     width: 12
     height: 2
-  - title: Won Opportunities
-    name: Won Opportunities
-    model: salesforce_mrr_demo
-    explore: opportunity
-    type: looker_column
-    fields: [opportunity.count, opportunity.lead_source, opportunity.close_month]
-    pivots: [opportunity.lead_source]
-    fill_fields: [opportunity.close_month]
-    filters:
-      opportunity.is_won: 'Yes'
-    sorts: [opportunity.lead_source, opportunity.close_month desc]
-    limit: 500
-    column_limit: 50
-    color_application:
-      collection_id: legacy
-      palette_id: santa_cruz
-      options:
-        steps: 5
-    x_axis_gridlines: false
-    y_axis_gridlines: true
-    show_view_names: false
-    show_y_axis_labels: true
-    show_y_axis_ticks: true
-    y_axis_tick_density: default
-    y_axis_tick_density_custom: 5
-    show_x_axis_label: true
-    show_x_axis_ticks: true
-    y_axis_scale_mode: linear
-    x_axis_reversed: false
-    y_axis_reversed: false
-    plot_size_by_field: false
-    trellis: ''
-    stacking: normal
-    limit_displayed_rows: false
-    legend_position: center
-    series_types: {}
-    point_style: none
-    show_value_labels: true
-    label_density: 25
-    x_axis_scale: auto
-    y_axis_combined: true
-    ordering: none
-    show_null_labels: false
-    show_totals_labels: true
-    show_silhouette: false
-    totals_color: "#353b49"
-    listen:
-      Date: opportunity.close_date
-      Lead Source: opportunity.lead_source
-    row: 24
-    col: 0
-    width: 12
-    height: 7
   - title: Lost Opportunities (Total)
     name: Lost Opportunities (Total)
     model: salesforce_mrr_demo
@@ -735,165 +582,6 @@
     col: 12
     width: 12
     height: 7
-  - title: Won Opportunities Value
-    name: Won Opportunities Value
-    model: salesforce_mrr_demo
-    explore: opportunity
-    type: looker_column
-    fields: [opportunity.lead_source, opportunity.close_month, opportunity.opportunity_value]
-    pivots: [opportunity.lead_source]
-    fill_fields: [opportunity.close_month]
-    filters:
-      opportunity.is_won: 'Yes'
-    sorts: [opportunity.lead_source, opportunity.close_month desc]
-    limit: 500
-    column_limit: 50
-    color_application:
-      collection_id: legacy
-      palette_id: santa_cruz
-      options:
-        steps: 5
-    x_axis_gridlines: false
-    y_axis_gridlines: true
-    show_view_names: false
-    show_y_axis_labels: true
-    show_y_axis_ticks: true
-    y_axis_tick_density: default
-    y_axis_tick_density_custom: 5
-    show_x_axis_label: true
-    show_x_axis_ticks: true
-    y_axis_scale_mode: linear
-    x_axis_reversed: false
-    y_axis_reversed: false
-    plot_size_by_field: false
-    trellis: ''
-    stacking: normal
-    limit_displayed_rows: false
-    legend_position: center
-    series_types: {}
-    point_style: none
-    show_value_labels: true
-    label_density: 25
-    x_axis_scale: auto
-    y_axis_combined: true
-    ordering: none
-    show_null_labels: false
-    show_totals_labels: true
-    show_silhouette: false
-    totals_color: "#353b49"
-    listen:
-      Date: opportunity.close_date
-      Lead Source: opportunity.lead_source
-    row: 24
-    col: 12
-    width: 12
-    height: 7
-  - title: Lost Opportunities Value
-    name: Lost Opportunities Value
-    model: salesforce_mrr_demo
-    explore: opportunity
-    type: looker_column
-    fields: [opportunity.lead_source, opportunity.close_month, opportunity.opportunity_value]
-    pivots: [opportunity.lead_source]
-    fill_fields: [opportunity.close_month]
-    filters:
-      opportunity.is_won: 'No'
-    sorts: [opportunity.lead_source, opportunity.close_month desc]
-    limit: 500
-    column_limit: 50
-    color_application:
-      collection_id: legacy
-      palette_id: santa_cruz
-      options:
-        steps: 5
-    x_axis_gridlines: false
-    y_axis_gridlines: true
-    show_view_names: false
-    show_y_axis_labels: true
-    show_y_axis_ticks: true
-    y_axis_tick_density: default
-    y_axis_tick_density_custom: 5
-    show_x_axis_label: true
-    show_x_axis_ticks: true
-    y_axis_scale_mode: linear
-    x_axis_reversed: false
-    y_axis_reversed: false
-    plot_size_by_field: false
-    trellis: ''
-    stacking: normal
-    limit_displayed_rows: false
-    legend_position: center
-    series_types: {}
-    point_style: none
-    show_value_labels: true
-    label_density: 25
-    x_axis_scale: auto
-    y_axis_combined: true
-    ordering: none
-    show_null_labels: false
-    show_totals_labels: true
-    show_silhouette: false
-    totals_color: "#353b49"
-    listen:
-      Date: opportunity.close_date
-      Lead Source: opportunity.lead_source
-    row: 33
-    col: 12
-    width: 12
-    height: 7
-  - title: Lost Opportunities
-    name: Lost Opportunities
-    model: salesforce_mrr_demo
-    explore: opportunity
-    type: looker_column
-    fields: [opportunity.count, opportunity.lead_source, opportunity.close_month]
-    pivots: [opportunity.lead_source]
-    fill_fields: [opportunity.close_month]
-    filters:
-      opportunity.is_won: 'No'
-    sorts: [opportunity.lead_source, opportunity.close_month desc]
-    limit: 500
-    column_limit: 50
-    color_application:
-      collection_id: legacy
-      palette_id: santa_cruz
-      options:
-        steps: 5
-    x_axis_gridlines: false
-    y_axis_gridlines: true
-    show_view_names: false
-    show_y_axis_labels: true
-    show_y_axis_ticks: true
-    y_axis_tick_density: default
-    y_axis_tick_density_custom: 5
-    show_x_axis_label: true
-    show_x_axis_ticks: true
-    y_axis_scale_mode: linear
-    x_axis_reversed: false
-    y_axis_reversed: false
-    plot_size_by_field: false
-    trellis: ''
-    stacking: normal
-    limit_displayed_rows: false
-    legend_position: center
-    series_types: {}
-    point_style: none
-    show_value_labels: true
-    label_density: 25
-    x_axis_scale: auto
-    y_axis_combined: true
-    ordering: none
-    show_null_labels: false
-    show_totals_labels: true
-    show_silhouette: false
-    totals_color: "#353b49"
-    listen:
-      Date: opportunity.close_date
-      Lead Source: opportunity.lead_source
-    row: 33
-    col: 0
-    width: 12
-    height: 7
   - title: New Contracts (Total)
     name: New Contracts (Total)
     model: salesforce_mrr_demo
@@ -941,56 +629,6 @@
     col: 0
     width: 12
     height: 2
-  - title: New Contracts
-    name: New Contracts
-    model: salesforce_mrr_demo
-    explore: contract_line
-    type: looker_column
-    fields: [contract.count, contract.lead_source, contract.contract_start_month]
-    pivots: [contract.lead_source]
-    fill_fields: [contract.contract_start_month]
-    sorts: [contract.contract_start_month desc, contract.lead_source]
-    limit: 500
-    color_application:
-      collection_id: legacy
-      palette_id: santa_cruz
-      options:
-        steps: 5
-    x_axis_gridlines: false
-    y_axis_gridlines: true
-    show_view_names: false
-    show_y_axis_labels: true
-    show_y_axis_ticks: true
-    y_axis_tick_density: default
-    y_axis_tick_density_custom: 5
-    show_x_axis_label: true
-    show_x_axis_ticks: true
-    y_axis_scale_mode: linear
-    x_axis_reversed: false
-    y_axis_reversed: false
-    plot_size_by_field: false
-    trellis: ''
-    stacking: normal
-    limit_displayed_rows: false
-    legend_position: center
-    series_types: {}
-    point_style: none
-    show_value_labels: true
-    label_density: 25
-    x_axis_scale: auto
-    y_axis_combined: true
-    ordering: none
-    show_null_labels: false
-    show_totals_labels: true
-    show_silhouette: false
-    totals_color: "#808080"
-    listen:
-      Date: contract.contract_start_date
-      Lead Source: opportunity.lead_source
-    row: 44
-    col: 0
-    width: 12
-    height: 7
   - title: New Contracts Value (Total)
     name: New Contracts Value (Total)
     model: salesforce_mrr_demo
@@ -1038,6 +676,450 @@
     col: 12
     width: 12
     height: 2
+  - title: New Opportunities
+    name: New Opportunities
+    model: salesforce_mrr_demo
+    explore: opportunity
+    type: looker_column
+    fields: [opportunity.count, opportunity.lead_source, opportunity.created_month]
+    pivots: [opportunity.lead_source]
+    fill_fields: [opportunity.created_month]
+    sorts: [opportunity.created_month desc, opportunity.lead_source]
+    limit: 500
+    color_application:
+      collection_id: legacy
+      palette_id: santa_cruz
+      options:
+        steps: 5
+    x_axis_gridlines: false
+    y_axis_gridlines: true
+    show_view_names: false
+    y_axes: [{label: '', orientation: left, series: [{axisId: " - opportunity.count",
+            id: " - opportunity.count", name: Opportunity}, {axisId: Client Referral
+              - opportunity.count, id: Client Referral - opportunity.count, name: Client
+              Referral}, {axisId: Direct - opportunity.count, id: Direct - opportunity.count,
+            name: Direct}, {axisId: Employee Referral - opportunity.count, id: Employee
+              Referral - opportunity.count, name: Employee Referral}, {axisId: Event
+              - opportunity.count, id: Event - opportunity.count, name: Event}, {
+            axisId: Inbound - opportunity.count, id: Inbound - opportunity.count,
+            name: Inbound}, {axisId: Other - opportunity.count, id: Other - opportunity.count,
+            name: Other}, {axisId: Partner - opportunity.count, id: Partner - opportunity.count,
+            name: Partner}, {axisId: Predictable Revenue - opportunity.count, id: Predictable
+              Revenue - opportunity.count, name: Predictable Revenue}], showLabels: false,
+        showValues: true, unpinAxis: false, tickDensity: default, tickDensityCustom: 5,
+        type: linear}]
+    show_y_axis_labels: true
+    show_y_axis_ticks: true
+    y_axis_tick_density: default
+    y_axis_tick_density_custom: 5
+    show_x_axis_label: false
+    show_x_axis_ticks: true
+    y_axis_scale_mode: linear
+    x_axis_reversed: false
+    y_axis_reversed: false
+    plot_size_by_field: false
+    trellis: ''
+    stacking: normal
+    limit_displayed_rows: false
+    legend_position: center
+    series_types: {}
+    point_style: none
+    show_value_labels: true
+    label_density: 25
+    x_axis_scale: auto
+    y_axis_combined: true
+    ordering: none
+    show_null_labels: false
+    show_totals_labels: true
+    show_silhouette: false
+    totals_color: "#353b49"
+    listen:
+      Date: opportunity.created_date
+      Lead Source: opportunity.lead_source
+    row: 15
+    col: 0
+    width: 12
+    height: 7
+  - title: New Opportunities Value
+    name: New Opportunities Value
+    model: salesforce_mrr_demo
+    explore: opportunity
+    type: looker_column
+    fields: [opportunity.lead_source, opportunity.created_month, opportunity.opportunity_value]
+    pivots: [opportunity.lead_source]
+    fill_fields: [opportunity.created_month]
+    sorts: [opportunity.created_month desc, opportunity.lead_source]
+    limit: 500
+    color_application:
+      collection_id: legacy
+      palette_id: santa_cruz
+      options:
+        steps: 5
+    x_axis_gridlines: false
+    y_axis_gridlines: true
+    show_view_names: false
+    y_axes: [{label: '', orientation: left, series: [{axisId: " - opportunity.opportunity_value",
+            id: " - opportunity.opportunity_value", name: Opportunity Value}, {axisId: Client
+              Referral - opportunity.opportunity_value, id: Client Referral - opportunity.opportunity_value,
+            name: Client Referral}, {axisId: Direct - opportunity.opportunity_value,
+            id: Direct - opportunity.opportunity_value, name: Direct}, {axisId: Employee
+              Referral - opportunity.opportunity_value, id: Employee Referral - opportunity.opportunity_value,
+            name: Employee Referral}, {axisId: Event - opportunity.opportunity_value,
+            id: Event - opportunity.opportunity_value, name: Event}, {axisId: Inbound
+              - opportunity.opportunity_value, id: Inbound - opportunity.opportunity_value,
+            name: Inbound}, {axisId: Other - opportunity.opportunity_value, id: Other
+              - opportunity.opportunity_value, name: Other}, {axisId: Partner - opportunity.opportunity_value,
+            id: Partner - opportunity.opportunity_value, name: Partner}, {axisId: Predictable
+              Revenue - opportunity.opportunity_value, id: Predictable Revenue - opportunity.opportunity_value,
+            name: Predictable Revenue}], showLabels: false, showValues: true, unpinAxis: false,
+        tickDensity: default, tickDensityCustom: 5, type: linear}]
+    show_y_axis_labels: true
+    show_y_axis_ticks: true
+    y_axis_tick_density: default
+    y_axis_tick_density_custom: 5
+    show_x_axis_label: false
+    show_x_axis_ticks: true
+    y_axis_scale_mode: linear
+    x_axis_reversed: false
+    y_axis_reversed: false
+    plot_size_by_field: false
+    trellis: ''
+    stacking: normal
+    limit_displayed_rows: false
+    legend_position: center
+    series_types: {}
+    point_style: none
+    show_value_labels: true
+    label_density: 25
+    x_axis_scale: auto
+    y_axis_combined: true
+    ordering: none
+    show_null_labels: false
+    show_totals_labels: true
+    show_silhouette: false
+    totals_color: "#353b49"
+    listen:
+      Date: opportunity.created_date
+      Lead Source: opportunity.lead_source
+    row: 15
+    col: 12
+    width: 12
+    height: 7
+  - title: Won Opportunities
+    name: Won Opportunities
+    model: salesforce_mrr_demo
+    explore: opportunity
+    type: looker_column
+    fields: [opportunity.count, opportunity.lead_source, opportunity.close_month]
+    pivots: [opportunity.lead_source]
+    fill_fields: [opportunity.close_month]
+    filters:
+      opportunity.is_won: 'Yes'
+    sorts: [opportunity.lead_source, opportunity.close_month desc]
+    limit: 500
+    column_limit: 50
+    color_application:
+      collection_id: legacy
+      palette_id: santa_cruz
+      options:
+        steps: 5
+    x_axis_gridlines: false
+    y_axis_gridlines: true
+    show_view_names: false
+    y_axes: [{label: '', orientation: left, series: [{axisId: " - opportunity.count",
+            id: " - opportunity.count", name: Opportunity}, {axisId: Direct - opportunity.count,
+            id: Direct - opportunity.count, name: Direct}, {axisId: Inbound - opportunity.count,
+            id: Inbound - opportunity.count, name: Inbound}, {axisId: Other - opportunity.count,
+            id: Other - opportunity.count, name: Other}], showLabels: false, showValues: true,
+        unpinAxis: false, tickDensity: default, tickDensityCustom: 5, type: linear}]
+    show_y_axis_labels: true
+    show_y_axis_ticks: true
+    y_axis_tick_density: default
+    y_axis_tick_density_custom: 5
+    show_x_axis_label: false
+    show_x_axis_ticks: true
+    y_axis_scale_mode: linear
+    x_axis_reversed: false
+    y_axis_reversed: false
+    plot_size_by_field: false
+    trellis: ''
+    stacking: normal
+    limit_displayed_rows: false
+    legend_position: center
+    series_types: {}
+    point_style: none
+    show_value_labels: true
+    label_density: 25
+    x_axis_scale: auto
+    y_axis_combined: true
+    ordering: none
+    show_null_labels: false
+    show_totals_labels: true
+    show_silhouette: false
+    totals_color: "#353b49"
+    listen:
+      Date: opportunity.close_date
+      Lead Source: opportunity.lead_source
+    row: 24
+    col: 0
+    width: 12
+    height: 7
+  - title: Won Opportunities Value
+    name: Won Opportunities Value
+    model: salesforce_mrr_demo
+    explore: opportunity
+    type: looker_column
+    fields: [opportunity.lead_source, opportunity.close_month, opportunity.opportunity_value]
+    pivots: [opportunity.lead_source]
+    fill_fields: [opportunity.close_month]
+    filters:
+      opportunity.is_won: 'Yes'
+    sorts: [opportunity.lead_source, opportunity.close_month desc]
+    limit: 500
+    column_limit: 50
+    color_application:
+      collection_id: legacy
+      palette_id: santa_cruz
+      options:
+        steps: 5
+    x_axis_gridlines: false
+    y_axis_gridlines: true
+    show_view_names: false
+    y_axes: [{label: '', orientation: left, series: [{axisId: " - opportunity.opportunity_value",
+            id: " - opportunity.opportunity_value", name: Opportunity Value}, {axisId: Direct
+              - opportunity.opportunity_value, id: Direct - opportunity.opportunity_value,
+            name: Direct}, {axisId: Inbound - opportunity.opportunity_value, id: Inbound
+              - opportunity.opportunity_value, name: Inbound}, {axisId: Other - opportunity.opportunity_value,
+            id: Other - opportunity.opportunity_value, name: Other}], showLabels: false,
+        showValues: true, unpinAxis: false, tickDensity: default, tickDensityCustom: 5,
+        type: linear}]
+    show_y_axis_labels: true
+    show_y_axis_ticks: true
+    y_axis_tick_density: default
+    y_axis_tick_density_custom: 5
+    show_x_axis_label: false
+    show_x_axis_ticks: true
+    y_axis_scale_mode: linear
+    x_axis_reversed: false
+    y_axis_reversed: false
+    plot_size_by_field: false
+    trellis: ''
+    stacking: normal
+    limit_displayed_rows: false
+    legend_position: center
+    series_types: {}
+    point_style: none
+    show_value_labels: true
+    label_density: 25
+    x_axis_scale: auto
+    y_axis_combined: true
+    ordering: none
+    show_null_labels: false
+    show_totals_labels: true
+    show_silhouette: false
+    totals_color: "#353b49"
+    listen:
+      Date: opportunity.close_date
+      Lead Source: opportunity.lead_source
+    row: 24
+    col: 12
+    width: 12
+    height: 7
+  - title: Lost Opportunities
+    name: Lost Opportunities
+    model: salesforce_mrr_demo
+    explore: opportunity
+    type: looker_column
+    fields: [opportunity.count, opportunity.lead_source, opportunity.close_month]
+    pivots: [opportunity.lead_source]
+    fill_fields: [opportunity.close_month]
+    filters:
+      opportunity.is_won: 'No'
+    sorts: [opportunity.lead_source, opportunity.close_month desc]
+    limit: 500
+    column_limit: 50
+    color_application:
+      collection_id: legacy
+      palette_id: santa_cruz
+      options:
+        steps: 5
+    x_axis_gridlines: false
+    y_axis_gridlines: true
+    show_view_names: false
+    y_axes: [{label: '', orientation: left, series: [{axisId: " - opportunity.count",
+            id: " - opportunity.count", name: Opportunity}, {axisId: Client Referral
+              - opportunity.count, id: Client Referral - opportunity.count, name: Client
+              Referral}, {axisId: Direct - opportunity.count, id: Direct - opportunity.count,
+            name: Direct}, {axisId: Employee Referral - opportunity.count, id: Employee
+              Referral - opportunity.count, name: Employee Referral}, {axisId: Event
+              - opportunity.count, id: Event - opportunity.count, name: Event}, {
+            axisId: Inbound - opportunity.count, id: Inbound - opportunity.count,
+            name: Inbound}, {axisId: Networking - opportunity.count, id: Networking
+              - opportunity.count, name: Networking}, {axisId: OFFLINE - opportunity.count,
+            id: OFFLINE - opportunity.count, name: OFFLINE}, {axisId: Other - opportunity.count,
+            id: Other - opportunity.count, name: Other}, {axisId: Partner - opportunity.count,
+            id: Partner - opportunity.count, name: Partner}], showLabels: false, showValues: true,
+        unpinAxis: false, tickDensity: default, tickDensityCustom: 5, type: linear}]
+    show_y_axis_labels: true
+    show_y_axis_ticks: true
+    y_axis_tick_density: default
+    y_axis_tick_density_custom: 5
+    show_x_axis_label: false
+    show_x_axis_ticks: true
+    y_axis_scale_mode: linear
+    x_axis_reversed: false
+    y_axis_reversed: false
+    plot_size_by_field: false
+    trellis: ''
+    stacking: normal
+    limit_displayed_rows: false
+    legend_position: center
+    series_types: {}
+    point_style: none
+    show_value_labels: true
+    label_density: 25
+    x_axis_scale: auto
+    y_axis_combined: true
+    ordering: none
+    show_null_labels: false
+    show_totals_labels: true
+    show_silhouette: false
+    totals_color: "#353b49"
+    listen:
+      Date: opportunity.close_date
+      Lead Source: opportunity.lead_source
+    row: 33
+    col: 0
+    width: 12
+    height: 7
+  - title: Lost Opportunities Value
+    name: Lost Opportunities Value
+    model: salesforce_mrr_demo
+    explore: opportunity
+    type: looker_column
+    fields: [opportunity.lead_source, opportunity.close_month, opportunity.opportunity_value]
+    pivots: [opportunity.lead_source]
+    fill_fields: [opportunity.close_month]
+    filters:
+      opportunity.is_won: 'No'
+    sorts: [opportunity.lead_source, opportunity.close_month desc]
+    limit: 500
+    column_limit: 50
+    color_application:
+      collection_id: legacy
+      palette_id: santa_cruz
+      options:
+        steps: 5
+    x_axis_gridlines: false
+    y_axis_gridlines: true
+    show_view_names: false
+    y_axes: [{label: '', orientation: left, series: [{axisId: " - opportunity.opportunity_value",
+            id: " - opportunity.opportunity_value", name: Opportunity Value}, {axisId: Client
+              Referral - opportunity.opportunity_value, id: Client Referral - opportunity.opportunity_value,
+            name: Client Referral}, {axisId: Direct - opportunity.opportunity_value,
+            id: Direct - opportunity.opportunity_value, name: Direct}, {axisId: Employee
+              Referral - opportunity.opportunity_value, id: Employee Referral - opportunity.opportunity_value,
+            name: Employee Referral}, {axisId: Event - opportunity.opportunity_value,
+            id: Event - opportunity.opportunity_value, name: Event}, {axisId: Inbound
+              - opportunity.opportunity_value, id: Inbound - opportunity.opportunity_value,
+            name: Inbound}, {axisId: Networking - opportunity.opportunity_value, id: Networking
+              - opportunity.opportunity_value, name: Networking}, {axisId: OFFLINE
+              - opportunity.opportunity_value, id: OFFLINE - opportunity.opportunity_value,
+            name: OFFLINE}, {axisId: Other - opportunity.opportunity_value, id: Other
+              - opportunity.opportunity_value, name: Other}, {axisId: Partner - opportunity.opportunity_value,
+            id: Partner - opportunity.opportunity_value, name: Partner}], showLabels: false,
+        showValues: true, unpinAxis: false, tickDensity: default, tickDensityCustom: 5,
+        type: linear}]
+    show_y_axis_labels: true
+    show_y_axis_ticks: true
+    y_axis_tick_density: default
+    y_axis_tick_density_custom: 5
+    show_x_axis_label: false
+    show_x_axis_ticks: true
+    y_axis_scale_mode: linear
+    x_axis_reversed: false
+    y_axis_reversed: false
+    plot_size_by_field: false
+    trellis: ''
+    stacking: normal
+    limit_displayed_rows: false
+    legend_position: center
+    series_types: {}
+    point_style: none
+    show_value_labels: true
+    label_density: 25
+    x_axis_scale: auto
+    y_axis_combined: true
+    ordering: none
+    show_null_labels: false
+    show_totals_labels: true
+    show_silhouette: false
+    totals_color: "#353b49"
+    listen:
+      Date: opportunity.close_date
+      Lead Source: opportunity.lead_source
+    row: 33
+    col: 12
+    width: 12
+    height: 7
+  - title: New Contracts
+    name: New Contracts
+    model: salesforce_mrr_demo
+    explore: contract_line
+    type: looker_column
+    fields: [contract.count, contract.lead_source, contract.contract_start_month]
+    pivots: [contract.lead_source]
+    fill_fields: [contract.contract_start_month]
+    sorts: [contract.contract_start_month desc, contract.lead_source]
+    limit: 500
+    color_application:
+      collection_id: legacy
+      palette_id: santa_cruz
+      options:
+        steps: 5
+    x_axis_gridlines: false
+    y_axis_gridlines: true
+    show_view_names: false
+    y_axes: [{label: '', orientation: left, series: [{axisId: " - contract.count",
+            id: " - contract.count", name: Contract}, {axisId: Direct - contract.count,
+            id: Direct - contract.count, name: Direct}, {axisId: Inbound - contract.count,
+            id: Inbound - contract.count, name: Inbound}, {axisId: Lead Generation
+              - contract.count, id: Lead Generation - contract.count, name: Lead Generation},
+          {axisId: Partner - contract.count, id: Partner - contract.count, name: Partner}],
+        showLabels: false, showValues: true, unpinAxis: false, tickDensity: default,
+        tickDensityCustom: 5, type: linear}]
+    show_y_axis_labels: true
+    show_y_axis_ticks: true
+    y_axis_tick_density: default
+    y_axis_tick_density_custom: 5
+    show_x_axis_label: false
+    show_x_axis_ticks: true
+    y_axis_scale_mode: linear
+    x_axis_reversed: false
+    y_axis_reversed: false
+    plot_size_by_field: false
+    trellis: ''
+    stacking: normal
+    limit_displayed_rows: false
+    legend_position: center
+    series_types: {}
+    point_style: none
+    show_value_labels: true
+    label_density: 25
+    x_axis_scale: auto
+    y_axis_combined: true
+    ordering: none
+    show_null_labels: false
+    show_totals_labels: true
+    show_silhouette: false
+    totals_color: "#808080"
+    listen:
+      Date: contract.contract_start_date
+      Lead Source: opportunity.lead_source
+    row: 44
+    col: 0
+    width: 12
+    height: 7
   - title: New Contracts Value
     name: New Contracts Value
     model: salesforce_mrr_demo
@@ -1056,11 +1138,21 @@
     x_axis_gridlines: false
     y_axis_gridlines: true
     show_view_names: false
+    y_axes: [{label: '', orientation: left, series: [{axisId: " - contract_line.contract_line_mrr",
+            id: " - contract_line.contract_line_mrr", name: Contract Line Mrr}, {
+            axisId: Direct - contract_line.contract_line_mrr, id: Direct - contract_line.contract_line_mrr,
+            name: Direct}, {axisId: Inbound - contract_line.contract_line_mrr, id: Inbound
+              - contract_line.contract_line_mrr, name: Inbound}, {axisId: Lead Generation
+              - contract_line.contract_line_mrr, id: Lead Generation - contract_line.contract_line_mrr,
+            name: Lead Generation}, {axisId: Partner - contract_line.contract_line_mrr,
+            id: Partner - contract_line.contract_line_mrr, name: Partner}], showLabels: false,
+        showValues: true, unpinAxis: false, tickDensity: default, tickDensityCustom: 5,
+        type: linear}]
     show_y_axis_labels: true
     show_y_axis_ticks: true
     y_axis_tick_density: default
     y_axis_tick_density_custom: 5
-    show_x_axis_label: true
+    show_x_axis_label: false
     show_x_axis_ticks: true
     y_axis_scale_mode: linear
     x_axis_reversed: false
