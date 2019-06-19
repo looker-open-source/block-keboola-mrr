@@ -18,6 +18,17 @@ view: contract {
     sql: ${TABLE}."CONTRACT" ;;
   }
 
+  dimension: employee_id {
+    type: string
+    # hidden: yes
+    sql: ${TABLE}."EMPLOYEE_ID" ;;
+  }
+
+  dimension: lead_source {
+    type: string
+    sql: ${TABLE}."LEAD_SOURCE" ;;
+  }
+
   dimension_group: contract_end {
     type: time
     timeframes: [
@@ -55,6 +66,6 @@ view: contract {
 
   measure: count {
     type: count
-    drill_fields: [company.company, contract, contract_number, contract_start_date, contract_line.contract_line_mrr]
+    drill_fields: [company.company_name, contract, contract_number, lead_source, employee.employee, contract_start_date, contract_line.contract_line_mrr]
   }
 }

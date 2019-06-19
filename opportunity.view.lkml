@@ -28,6 +28,11 @@ view: opportunity {
     sql: ${TABLE}."COMPANY_ID" ;;
   }
 
+  dimension: lead_source {
+    type: string
+    sql: ${TABLE}."LEAD_SOURCE" ;;
+  }
+
   dimension_group: created {
     type: time
     timeframes: [
@@ -76,6 +81,6 @@ view: opportunity {
 
   measure: count {
     type: count
-    drill_fields: [company.company, opportunity, created_date, opportunity_value]
+    drill_fields: [company.company_name, opportunity, lead_source, employee.employee, created_date, opportunity_value]
   }
 }

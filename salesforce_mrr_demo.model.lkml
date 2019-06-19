@@ -59,6 +59,12 @@ explore: mrr {
     relationship: many_to_one
   }
 
+  join: employee {
+    type: left_outer
+    sql_on: ${contract.employee_id} = ${employee.employee_id} ;;
+    relationship: many_to_one
+  }
+
   join: product {
     type: left_outer
     sql_on: ${contract_line.product_id} = ${product.product_id} ;;
@@ -99,5 +105,18 @@ explore: mrr_aggregated {
     sql_on: ${mrr_aggregated.company_id} = ${company.company_id} ;;
     relationship: many_to_one
   }
+}
 
+explore: contact {
+  join: company {
+    type: left_outer
+    sql_on: ${contact.company_id} = ${company.company_id} ;;
+    relationship: many_to_one
+  }
+
+  join: employee {
+    type: left_outer
+    sql_on: ${contact.employee_id} = ${employee.employee_id} ;;
+    relationship: many_to_one
+  }
 }
