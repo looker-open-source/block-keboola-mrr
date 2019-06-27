@@ -25,7 +25,7 @@
     height: 2
   - title: New Leads (Total)
     name: New Leads (Total)
-    model: salesforce_mrr_demo
+    model: salesforce_mrr
     explore: contact
     type: single_value
     fields: [contact.count]
@@ -95,7 +95,7 @@
     height: 2
   - title: New Leads
     name: New Leads
-    model: salesforce_mrr_demo
+    model: salesforce_mrr
     explore: contact
     type: looker_column
     fields: [contact.date_created_month, contact.lead_source, contact.count]
@@ -161,7 +161,7 @@
     height: 7
   - title: New Opportunities (Total)
     name: New Opportunities (Total)
-    model: salesforce_mrr_demo
+    model: salesforce_mrr
     explore: opportunity
     type: single_value
     fields: [opportunity.count]
@@ -208,7 +208,7 @@
     height: 2
   - title: New Opportunities Value (Total)
     name: New Opportunities Value (Total)
-    model: salesforce_mrr_demo
+    model: salesforce_mrr
     explore: opportunity
     type: single_value
     fields: [opportunity.opportunity_value]
@@ -255,7 +255,7 @@
     height: 2
   - title: New Contacts (Total)
     name: New Contacts (Total)
-    model: salesforce_mrr_demo
+    model: salesforce_mrr
     explore: contact
     type: single_value
     fields: [contact.count]
@@ -318,7 +318,7 @@
     height: 2
   - title: Won Opportunities (Total)
     name: Won Opportunities (Total)
-    model: salesforce_mrr_demo
+    model: salesforce_mrr
     explore: opportunity
     type: single_value
     fields: [opportunity.count]
@@ -368,7 +368,7 @@
     height: 2
   - title: Won Opportunities Value (Total)
     name: Won Opportunities Value (Total)
-    model: salesforce_mrr_demo
+    model: salesforce_mrr
     explore: opportunity
     type: single_value
     fields: [opportunity.opportunity_value]
@@ -418,7 +418,7 @@
     height: 2
   - title: Lost Opportunities (Total)
     name: Lost Opportunities (Total)
-    model: salesforce_mrr_demo
+    model: salesforce_mrr
     explore: opportunity
     type: single_value
     fields: [opportunity.count]
@@ -468,7 +468,7 @@
     height: 2
   - title: Lost Opportunities Value (Total)
     name: Lost Opportunities Value (Total)
-    model: salesforce_mrr_demo
+    model: salesforce_mrr
     explore: opportunity
     type: single_value
     fields: [opportunity.opportunity_value]
@@ -518,7 +518,7 @@
     height: 2
   - title: New Contacts
     name: New Contacts
-    model: salesforce_mrr_demo
+    model: salesforce_mrr
     explore: contact
     type: looker_column
     fields: [contact.date_created_month, contact.lead_source, contact.count]
@@ -584,7 +584,7 @@
     height: 7
   - title: New Contracts (Total)
     name: New Contracts (Total)
-    model: salesforce_mrr_demo
+    model: salesforce_mrr
     explore: contract_line
     type: single_value
     fields: [contract.count]
@@ -631,7 +631,7 @@
     height: 2
   - title: New Contracts Value (Total)
     name: New Contracts Value (Total)
-    model: salesforce_mrr_demo
+    model: salesforce_mrr
     explore: contract_line
     type: single_value
     fields: [contract_line.contract_line_mrr]
@@ -678,7 +678,7 @@
     height: 2
   - title: New Opportunities
     name: New Opportunities
-    model: salesforce_mrr_demo
+    model: salesforce_mrr
     explore: opportunity
     type: looker_column
     fields: [opportunity.count, opportunity.lead_source, opportunity.created_month]
@@ -742,7 +742,7 @@
     height: 7
   - title: New Opportunities Value
     name: New Opportunities Value
-    model: salesforce_mrr_demo
+    model: salesforce_mrr
     explore: opportunity
     type: looker_column
     fields: [opportunity.lead_source, opportunity.created_month, opportunity.opportunity_value]
@@ -807,7 +807,7 @@
     height: 7
   - title: Won Opportunities
     name: Won Opportunities
-    model: salesforce_mrr_demo
+    model: salesforce_mrr
     explore: opportunity
     type: looker_column
     fields: [opportunity.count, opportunity.lead_source, opportunity.close_month]
@@ -866,7 +866,7 @@
     height: 7
   - title: Won Opportunities Value
     name: Won Opportunities Value
-    model: salesforce_mrr_demo
+    model: salesforce_mrr
     explore: opportunity
     type: looker_column
     fields: [opportunity.lead_source, opportunity.close_month, opportunity.opportunity_value]
@@ -927,7 +927,7 @@
     height: 7
   - title: Lost Opportunities
     name: Lost Opportunities
-    model: salesforce_mrr_demo
+    model: salesforce_mrr
     explore: opportunity
     type: looker_column
     fields: [opportunity.count, opportunity.lead_source, opportunity.close_month]
@@ -994,7 +994,7 @@
     height: 7
   - title: Lost Opportunities Value
     name: Lost Opportunities Value
-    model: salesforce_mrr_demo
+    model: salesforce_mrr
     explore: opportunity
     type: looker_column
     fields: [opportunity.lead_source, opportunity.close_month, opportunity.opportunity_value]
@@ -1064,7 +1064,7 @@
     height: 7
   - title: New Contracts
     name: New Contracts
-    model: salesforce_mrr_demo
+    model: salesforce_mrr
     explore: contract_line
     type: looker_column
     fields: [contract.count, contract.lead_source, contract.contract_start_month]
@@ -1122,7 +1122,7 @@
     height: 7
   - title: New Contracts Value
     name: New Contracts Value
-    model: salesforce_mrr_demo
+    model: salesforce_mrr
     explore: contract_line
     type: looker_column
     fields: [contract.lead_source, contract.contract_start_month, contract_line.contract_line_mrr]
@@ -1193,7 +1193,7 @@
     default_value: ''
     allow_multiple_values: true
     required: false
-    model: salesforce_mrr_demo
+    model: salesforce_mrr
     explore: opportunity
     listens_to_filters: []
     field: opportunity.lead_source

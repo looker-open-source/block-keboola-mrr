@@ -19,9 +19,15 @@ view: mrr {
     sql: ${TABLE}."CONTRACT_LINE_ID" ;;
   }
 
+  dimension: contract_line_quantity_dimension {
+    hidden: yes
+    type: number
+    sql: ${TABLE}."CONTRACT_LINE_QUANTITY" ;;
+  }
+
   measure: contract_line_quantity {
     type: sum
-    sql: ${TABLE}."CONTRACT_LINE_QUANTITY" ;;
+    sql: ${contract_line_quantity_dimension} ;;
   }
 
   measure: contract_line_unit_price {

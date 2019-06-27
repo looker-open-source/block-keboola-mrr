@@ -6,12 +6,12 @@ include: "*.view"
 # include all lookml dashboards
 include: "*.dashboard.lookml"
 
-datagroup: salesforce_mrr_demo_default_datagroup {
+datagroup: salesforce_mrr_default_datagroup {
   # sql_trigger: SELECT MAX(id) FROM etl_log;;
   max_cache_age: "1 hour"
 }
 
-persist_with: salesforce_mrr_demo_default_datagroup
+persist_with: salesforce_mrr_default_datagroup
 
 explore: contract_line {
   join: opportunity {
