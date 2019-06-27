@@ -76,8 +76,8 @@ view: contract_line {
   }
 
   measure: contract_line_mrr {
-    type: number
-    sql: (${contract_line_unit_price} * ${contract_line_quantity});;
+    type: sum
+    sql: (${TABLE}."CONTRACT_LINE_UNIT_PRICE" * ${TABLE}."CONTRACT_LINE_QUANTITY");;
     value_format: "#,##0"
     drill_fields: [company.companye, contract.contract, contract_line_mrr]
   }

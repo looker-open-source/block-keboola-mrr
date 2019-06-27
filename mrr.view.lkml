@@ -30,8 +30,8 @@ view: mrr {
   }
 
   measure: contract_line_mrr {
-    type: number
-    sql: (${contract_line_unit_price} * ${contract_line_quantity});;
+    type: sum
+    sql: (${TABLE}."CONTRACT_LINE_UNIT_PRICE" * ${TABLE}."CONTRACT_LINE_QUANTITY");;
     value_format: "#,##0"
     drill_fields: [company.company_name,contract.contract_id,employee.employee,contract_line_mrr]
   }
@@ -62,8 +62,8 @@ view: mrr {
   }
 
   measure: previous_contract_line_mrr {
-    type: number
-    sql: (${previous_contract_line_unit_price} * ${previous_contract_line_quantity});;
+    type: sum
+    sql: (${TABLE}."PREVIOUS_CONTRACT_LINE_UNIT_PRICE" * ${TABLE}."PREVIOUS_CONTRACT_LINE_QUANTITY");;
     value_format: "#,##0"
     drill_fields: [company.company_name,contract.contract_id,employee.employee,contract_line_mrr,previous_contract_line_mrr]
   }
