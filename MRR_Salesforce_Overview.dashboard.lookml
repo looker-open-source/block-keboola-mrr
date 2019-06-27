@@ -27,12 +27,12 @@
       mrr.date_month: this month
     limit: 500
     dynamic_fields: [{table_calculation: annualized, label: Annualized, expression: "${mrr.contract_line_mrr}*12",
-        value_format: !!null '', value_format_name: !!null '', _kind_hint: measure,
+        value_format: !!null '', value_format_name: decimal_0, _kind_hint: measure,
         _type_hint: number}]
     custom_color_enabled: true
     custom_color: ''
     show_single_value_title: true
-    value_format: "# ### ###"
+    value_format: ''
     show_comparison: false
     comparison_type: value
     comparison_reverse_colors: false
