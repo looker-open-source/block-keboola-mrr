@@ -11,7 +11,7 @@ view: opportunity {
   dimension: opportunity_url {
     type: string
     # hidden: yes
-    sql:  'https://keboola.lightning.force.com/lightning/r/Opportunity' || ${TABLE}."OPPORTUNITY_ID" || '/view' ;;
+    sql:  'https://keboola.lightning.force.com/lightning/r/Opportunity' || ${opportunity_id} || '/view' ;;
   }
 
   dimension_group: close {

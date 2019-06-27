@@ -62,7 +62,7 @@ view: mrr_aggregated {
 
   measure: customer_count {
     type: count_distinct
-    sql: ${TABLE}."COMPANY_ID";;
+    sql: ${company_id};;
     view_label: ""
     filters: {
       field: customer_active

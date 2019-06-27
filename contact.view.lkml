@@ -10,7 +10,7 @@ view: contact {
   dimension: contact_url {
     type: string
     # hidden: yes
-    sql:  'https://keboola.lightning.force.com/lightning/r/' || iff(${TABLE}."CONTACT_TYPE" = 'Contact' , 'Contact/', 'Lead/') || ${TABLE}."CONTACT_ID" || '/view' ;;
+    sql:  'https://keboola.lightning.force.com/lightning/r/' || iff(${contact_type} = 'Contact' , 'Contact/', 'Lead/') || ${contact_id} || '/view' ;;
   }
 
   dimension: company_id {
