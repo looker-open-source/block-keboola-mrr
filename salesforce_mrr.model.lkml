@@ -1,5 +1,7 @@
 connection: "mrr_salesforce_demo"
 
+label: "Salesforce CRM & MRR"
+
 # include all the views
 include: "*.view"
 
