@@ -2,21 +2,28 @@ view: contact {
   sql_table_name: CONTACT ;;
 
   dimension: contact_id {
+    label: "Contact ID"
     primary_key: yes
     type: string
     sql: ${TABLE}."CONTACT_ID" ;;
   }
 
   dimension: contact_url {
+    label: "Contact URL"
     type: string
-    # hidden: yes
     sql:  'https://keboola.lightning.force.com/lightning/r/' || iff(${contact_type} = 'Contact' , 'Contact/', 'Lead/') || ${contact_id} || '/view' ;;
   }
 
   dimension: company_id {
     type: string
-    # hidden: yes
+    hidden: yes
     sql: ${TABLE}."COMPANY_ID" ;;
+  }
+
+  dimension: employee_id {
+    type: string
+    hidden: yes
+    sql: ${TABLE}."EMPLOYEE_ID" ;;
   }
 
   dimension: contact {
@@ -26,14 +33,9 @@ view: contact {
   }
 
   dimension: contact_type {
+    description: "View contains both Contacts and Leads"
     type: string
     sql: ${TABLE}."CONTACT_TYPE" ;;
-  }
-
-  dimension: employee_id {
-    type: string
-    # hidden: yes
-    sql: ${TABLE}."EMPLOYEE_ID" ;;
   }
 
   dimension_group: date_created {
@@ -57,6 +59,7 @@ view: contact {
   }
 
   dimension: lead_converted {
+    description: "Contains 'Yes/No' values for lead type records and 'Is Contact' value for contact type records"
     type: string
     sql: ${TABLE}."LEAD_CONVERTED" ;;
   }

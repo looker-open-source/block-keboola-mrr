@@ -2,15 +2,17 @@ view: company {
   sql_table_name: COMPANY ;;
 
   dimension: company_id {
+    label: "Company ID"
     primary_key: yes
     type: string
     sql: ${TABLE}."COMPANY_ID" ;;
   }
 
   dimension: company_url {
+    label: "Company URL"
     type: string
     # hidden: yes
-    sql:  'https://keboola.lightning.force.com/lightning/r/Account' || ${TABLE}."COMPANY_ID" || '/view' ;;
+    sql:  'https://keboola.lightning.force.com/lightning/r/Account' || ${company_id} || '/view' ;;
   }
 
   dimension: company {

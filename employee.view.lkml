@@ -2,6 +2,7 @@ view: employee {
   sql_table_name: EMPLOYEE ;;
 
   dimension: employee_id {
+    label: "Employee ID"
     primary_key: yes
     type: string
     sql: ${TABLE}."EMPLOYEE_ID" ;;
@@ -24,6 +25,6 @@ view: employee {
 
   measure: count {
     type: count
-    drill_fields: [employee_id, opportunity.count, opportunity_snapshot.count]
+    drill_fields: [employee_id, position, count]
   }
 }

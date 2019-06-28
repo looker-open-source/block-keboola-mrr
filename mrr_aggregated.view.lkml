@@ -3,20 +3,16 @@ view: mrr_aggregated {
   sql_table_name: MRR_AGGREGATED ;;
 
   dimension: mrr_aggregated_id {
+    label: "MRR Aggregated ID"
     primary_key: yes
     type: string
     sql: ${TABLE}."MRR_AGGREGATED_ID" ;;
   }
 
   dimension: company_id {
+    hidden: yes
     type: string
     sql: ${TABLE}."COMPANY_ID" ;;
-  }
-
-  measure: count_change {
-    type: sum
-    sql: ${TABLE}."COUNT_CHANGE" ;;
-    drill_fields: [company.company,gross_action]
   }
 
   dimension: currency {
@@ -41,6 +37,7 @@ view: mrr_aggregated {
   }
 
   dimension: gross_action {
+    description: "Type of MRR change"
     type: string
     sql: ${TABLE}."GROSS_ACTION" ;;
   }
@@ -55,12 +52,45 @@ view: mrr_aggregated {
     view_label: ""
   }
 
+  dimension: gross_mrr_dimension {
+    hidden: yes
+    type: number
+    sql: ${TABLE}."GROSS_MRR" ;;
+  }
+
+  dimension: gross_mrr_change_dimension {
+    hidden: yes
+    type: number
+    sql: ${TABLE}."GROSS_MRR_CHANGE" ;;
+  }
+
+  dimension: previous_gross_mrr_dimension {
+    hidden: yes
+    type: number
+    sql: ${TABLE}."PREVIOUS_GROSS_MRR" ;;
+  }
+
   dimension: customer_active {
-    type: string
-    sql: IFF(${TABLE}."GROSS_MRR" > 0,'Yes','No') ;;
+    description: "Customer is active if his/her MRR is above 0"
+    type: yesno
+    sql: ${gross_mrr_dimension} > 0 ;;
+  }
+
+  dimension: count_change_dimension {
+    hidden: yes
+    type: number
+    sql: ${TABLE}."COUNT_CHANGE" ;;
+  }
+
+  measure: count_change {
+    description: "Calculates change of MRR: no change = 0, decrees = -1, increase = 1"
+    type: sum
+    sql: ${count_change_dimension} ;;
+    drill_fields: [company.company, gross_action]
   }
 
   measure: customer_count {
+    description: "Number of active customers"
     type: count_distinct
     sql: ${company_id};;
     view_label: ""
@@ -68,43 +98,44 @@ view: mrr_aggregated {
       field: customer_active
       value: "Yes"
     }
-    drill_fields: [company.company_name,gross_mrr,gross_mrr]
+    drill_fields: [company.company, gross_mrr,gross_mrr]
   }
 
   measure: gross_mrr {
     label: "Gross MRR"
     type: sum
-    sql: ${TABLE}."GROSS_MRR" ;;
+    sql: ${gross_mrr_dimension} ;;
     value_format: "#,##0"
-    drill_fields: [company.company,gross_mrr]
-  }
-
-  measure: gross_mrr_change {
-    label: "Gross MRR Change"
-    type: sum
-    sql: ${TABLE}."GROSS_MRR_CHANGE" ;;
-    value_format: "#,##0"
-    drill_fields: [company.company,gross_mrr_change]
+    drill_fields: [company.company, gross_mrr]
   }
 
   measure: previous_gross_mrr {
     label: "Previous Gross MRR"
     type: sum
-    sql: ${TABLE}."PREVIOUS_GROSS_MRR" ;;
+    sql: ${previous_gross_mrr_dimension} ;;
     value_format: "#,##0"
-    drill_fields: [company.company,previous_gross_mrr]
+    drill_fields: [company.company, previous_gross_mrr]
+  }
+
+  measure: gross_mrr_change {
+    description: "Change in Gross MRR vs previous month"
+    label: "Gross MRR Change"
+    type: sum
+    sql: ${gross_mrr_change_dimension} ;;
+    value_format: "#,##0"
+    drill_fields: [company.company, gross_mrr_change]
   }
 
   measure: gross_mrr_AVG {
     label: "Gross MRR AVG"
     type: average
-    sql: ${TABLE}."GROSS_MRR" ;;
+    sql: ${gross_mrr_dimension} ;;
     value_format: "#,##0"
-    drill_fields: [company.company_name,gross_mrr_AVG]
+    drill_fields: [company.company, gross_mrr_AVG]
   }
 
   measure: count {
     type: count
-    drill_fields: [mrr_aggregated_id]
+    drill_fields: [mrr_aggregated_id, count]
   }
 }

@@ -2,44 +2,30 @@ view: mrr {
   sql_table_name: MRR ;;
   label: "MRR"
 
+  set: company_contract_employee {
+    fields: [
+      company.company,
+      contract.contract_id,
+      employee.employee
+    ]
+  }
+
   dimension: mrr_id {
+    label: "MRR ID"
     primary_key: yes
     type: string
     sql: ${TABLE}."MRR_ID" ;;
   }
 
-  dimension: contract_line_currency {
-    type: string
-    sql: ${TABLE}."CONTRACT_LINE_CURRENCY" ;;
-  }
-
   dimension: contract_line_id {
     type: string
-    # hidden: yes
+    hidden: yes
     sql: ${TABLE}."CONTRACT_LINE_ID" ;;
   }
 
-  dimension: contract_line_quantity_dimension {
-    hidden: yes
-    type: number
-    sql: ${TABLE}."CONTRACT_LINE_QUANTITY" ;;
-  }
-
-  measure: contract_line_quantity {
-    type: sum
-    sql: ${contract_line_quantity_dimension} ;;
-  }
-
-  measure: contract_line_unit_price {
-    type: sum
-    sql: ${TABLE}."CONTRACT_LINE_UNIT_PRICE" ;;
-  }
-
-  measure: contract_line_mrr {
-    type: sum
-    sql: (${TABLE}."CONTRACT_LINE_UNIT_PRICE" * ${TABLE}."CONTRACT_LINE_QUANTITY");;
-    value_format: "#,##0"
-    drill_fields: [company.company_name,contract.contract_id,employee.employee,contract_line_mrr]
+  dimension: contract_line_currency {
+    type: string
+    sql: ${TABLE}."CONTRACT_LINE_CURRENCY" ;;
   }
 
   dimension_group: date {
@@ -57,49 +43,104 @@ view: mrr {
     sql: ${TABLE}."DATE" ;;
   }
 
-  measure: previous_contract_line_quantity {
-    type: sum
+  dimension: contract_line_quantity_dimension {
+    hidden: yes
+    type: number
+    sql: ${TABLE}."CONTRACT_LINE_QUANTITY" ;;
+  }
+
+  dimension: contract_line_unit_price_dimension {
+    hidden: yes
+    type: number
+    sql: ${TABLE}."CONTRACT_LINE_UNIT_PRICE" ;;
+  }
+
+  dimension: previous_contract_line_quantity_dimension {
+    hidden: yes
+    type: number
     sql: ${TABLE}."PREVIOUS_CONTRACT_LINE_QUANTITY" ;;
   }
 
-  measure: previous_contract_line_unit_price {
-    type: sum
+  dimension: previous_contract_line_unit_price_dimension {
+    hidden: yes
+    type: number
     sql: ${TABLE}."PREVIOUS_CONTRACT_LINE_UNIT_PRICE" ;;
   }
 
-  measure: previous_contract_line_mrr {
+  measure: contract_line_quantity {
+    description: "Quantity according to the selected month"
     type: sum
-    sql: (${TABLE}."PREVIOUS_CONTRACT_LINE_UNIT_PRICE" * ${TABLE}."PREVIOUS_CONTRACT_LINE_QUANTITY");;
+    sql: ${contract_line_quantity_dimension} ;;
     value_format: "#,##0"
-    drill_fields: [company.company_name,contract.contract_id,employee.employee,contract_line_mrr,previous_contract_line_mrr]
+  }
+
+  measure: contract_line_unit_price {
+    description: "Unit price according to the selected month"
+    type: sum
+    sql: ${contract_line_unit_price_dimension} ;;
+    value_format: "#,##0"
+  }
+
+  measure: contract_line_mrr {
+    description: "MRR value according to the selected month"
+    label: "Contract Line MRR"
+    type: sum
+    sql: (${contract_line_unit_price_dimension} * ${contract_line_quantity_dimension});;
+    value_format: "#,##0"
+    drill_fields: [company_contract_employee*, contract_line_mrr, previous_contract_line_mrr]
+  }
+
+  measure: previous_contract_line_quantity {
+    description: "Value of previous month"
+    type: sum
+    sql: ${previous_contract_line_quantity_dimension} ;;
+    value_format: "#,##0"
+    drill_fields: [company_contract_employee*, previous_contract_line_quantity]
+  }
+
+  measure: previous_contract_line_unit_price {
+    description: "Value of the previous month"
+    type: sum
+    sql: ${previous_contract_line_unit_price_dimension} ;;
+    value_format: "#,##0"
+    drill_fields: [company_contract_employee*, previous_contract_line_unit_price]
+  }
+
+  measure: previous_contract_line_mrr {
+    description: "Value of the previous month"
+    type: sum
+    sql: (${previous_contract_line_unit_price_dimension} * ${previous_contract_line_quantity_dimension});;
+    value_format: "#,##0"
+    drill_fields: [company_contract_employee*, contract_line_mrr, previous_contract_line_mrr]
   }
 
   measure: count {
     type: count
-    drill_fields: [mrr_id, contract_line.contract_line_id]
+    drill_fields: [company_contract_employee*, count]
   }
 
   dimension: contract_line_change {
+    description: "Type of action based on the line's MRR value change"
     type: string
     case: {
       when: {
-        sql: ${TABLE}."PREVIOUS_CONTRACT_LINE_UNIT_PRICE" * ${TABLE}."PREVIOUS_CONTRACT_LINE_QUANTITY" =  ${TABLE}."CONTRACT_LINE_UNIT_PRICE" * ${TABLE}."CONTRACT_LINE_QUANTITY" ;;
+        sql: ${previous_contract_line_unit_price_dimension} * ${previous_contract_line_quantity_dimension} =  ${contract_line_unit_price_dimension} * ${contract_line_quantity_dimension} ;;
         label: "No Change"
       }
       when: {
-        sql: ${TABLE}."PREVIOUS_CONTRACT_LINE_UNIT_PRICE" * ${TABLE}."PREVIOUS_CONTRACT_LINE_QUANTITY" = 0 ;;
+        sql: ${previous_contract_line_unit_price_dimension} * ${previous_contract_line_quantity_dimension} = 0 ;;
         label: "Net New"
       }
       when: {
-        sql: ${TABLE}."CONTRACT_LINE_UNIT_PRICE" * ${TABLE}."CONTRACT_LINE_QUANTITY" = 0 ;;
+        sql: ${contract_line_unit_price_dimension} * ${contract_line_quantity_dimension} = 0 ;;
         label: "Churn"
       }
       when: {
-        sql: ${TABLE}."PREVIOUS_CONTRACT_LINE_UNIT_PRICE" * ${TABLE}."PREVIOUS_CONTRACT_LINE_QUANTITY" >  ${TABLE}."CONTRACT_LINE_UNIT_PRICE" * ${TABLE}."CONTRACT_LINE_QUANTITY" ;;
+        sql: ${previous_contract_line_unit_price_dimension} * ${previous_contract_line_quantity_dimension} >  ${contract_line_unit_price_dimension} * ${contract_line_quantity_dimension} ;;
         label: "Downgrade"
       }
       when: {
-        sql: ${TABLE}."PREVIOUS_CONTRACT_LINE_UNIT_PRICE" * ${TABLE}."PREVIOUS_CONTRACT_LINE_QUANTITY" >  ${TABLE}."CONTRACT_LINE_UNIT_PRICE" * ${TABLE}."CONTRACT_LINE_QUANTITY" ;;
+        sql: ${previous_contract_line_unit_price_dimension} * ${previous_contract_line_quantity_dimension} <  ${contract_line_unit_price_dimension} * ${contract_line_quantity_dimension} ;;
         label: "Upgrade"
       }
       else: "No Change"
