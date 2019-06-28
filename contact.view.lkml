@@ -72,6 +72,6 @@ view: contact {
   measure: count {
     type: count
 
-    drill_fields: [company.company_name, contact, lead_source, employee.employee, date_created_date, count]
+    drill_fields: [company.company, contact, lead_source, employee.employee, date_created_date, count]
   }
 }
