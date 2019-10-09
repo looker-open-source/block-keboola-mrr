@@ -1,4 +1,4 @@
-connection: "mrr_salesforce_demo"
+connection: "@{connection}"
 
 label: "Salesforce CRM & MRR"
 
