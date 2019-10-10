@@ -1,5 +1,5 @@
 - dashboard: sales_overview_salesforce
-  title: Sales Overview Salesforce
+  title: Sales Salesforce Overview
   layout: newspaper
   elements:
   - name: Leads & Contacts
