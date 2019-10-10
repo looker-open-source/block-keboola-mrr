@@ -1,3 +1,3 @@
 constant: connection {
-  value: "mrr_salesforce"
+  value: "block_mrr_salesforce"
 }
