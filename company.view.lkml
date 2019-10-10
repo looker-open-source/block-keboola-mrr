@@ -32,7 +32,6 @@ view: company {
       year
     ]
     convert_tz: no
-    datatype: date
     sql: ${TABLE}."DATE_CREATED" ;;
   }
 

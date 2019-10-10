@@ -48,7 +48,6 @@ view: opportunity {
       year
     ]
     convert_tz: no
-    datatype: date
     sql: ${TABLE}."CLOSE_DATE" ;;
   }
 
@@ -68,7 +67,6 @@ view: opportunity {
       year
     ]
     convert_tz: no
-    datatype: date
     sql: ${TABLE}."CREATED_DATE" ;;
   }
 

@@ -32,7 +32,6 @@ view: mrr_aggregated {
       year
     ]
     convert_tz: no
-    datatype: date
     sql: ${TABLE}."DATE" ;;
   }
 

@@ -45,7 +45,6 @@ view: opportunity_snapshot {
       year
     ]
     convert_tz: no
-    datatype: date
     sql: ${TABLE}."SNAPSHOT_DATE" ;;
   }
 

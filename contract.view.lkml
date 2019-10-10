@@ -48,7 +48,6 @@ view: contract {
       year
     ]
     convert_tz: no
-    datatype: date
     sql: ${TABLE}."CONTRACT_END_DATE" ;;
   }
 
@@ -69,7 +68,6 @@ view: contract {
       year
     ]
     convert_tz: no
-    datatype: date
     sql: ${TABLE}."CONTRACT_START_DATE" ;;
   }
 
