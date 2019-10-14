@@ -12,7 +12,7 @@ view: company {
     label: "Company URL"
     type: string
     # hidden: yes
-    sql:  'https://keboola.lightning.force.com/lightning/r/Account' || ${company_id} || '/view' ;;
+    sql:  'https://@{domain}/lightning/r/Account' || ${company_id} || '/view' ;;
   }
 
   dimension: company {

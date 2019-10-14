@@ -22,7 +22,7 @@ view: opportunity {
   dimension: opportunity_url {
     label: "Opportunity URL"
     type: string
-    sql:  'https://keboola.lightning.force.com/lightning/r/Opportunity' || ${opportunity_id} || '/view' ;;
+    sql:  'https://@{domain}/lightning/r/Opportunity' || ${opportunity_id} || '/view' ;;
   }
 
   dimension: company_id {

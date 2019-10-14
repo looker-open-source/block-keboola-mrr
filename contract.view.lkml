@@ -12,7 +12,7 @@ view: contract {
   dimension: contract_url {
     label: "Contract URL"
     type: string
-    sql:  'https://keboola.lightning.force.com/lightning/r/Order' || ${contract_id} || '/view' ;;
+    sql:  'https://@{domain}/lightning/r/Order' || ${contract_id} || '/view' ;;
   }
 
   dimension: company_id {

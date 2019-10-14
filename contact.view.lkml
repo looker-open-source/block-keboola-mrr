@@ -11,7 +11,7 @@ view: contact {
   dimension: contact_url {
     label: "Contact URL"
     type: string
-    sql:  'https://keboola.lightning.force.com/lightning/r/' || iff(${contact_type} = 'Contact' , 'Contact/', 'Lead/') || ${contact_id} || '/view' ;;
+    sql:  'https://@{domain}/lightning/r/' || iff(${contact_type} = 'Contact' , 'Contact/', 'Lead/') || ${contact_id} || '/view' ;;
   }
 
   dimension: company_id {
