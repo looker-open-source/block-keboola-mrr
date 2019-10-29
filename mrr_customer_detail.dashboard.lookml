@@ -8,7 +8,14 @@
     subtitle_text: <font size="5px"><font color="#408ef7"><b>MRR</b></font>
     row: 0
     col: 0
-    width: 8
+    width: 6
+    height: 2
+  - name: 'dashboard'
+    type: text
+    subtitle_text: <font size="5px"><font color="#408ef7"><b>Customer Profile</b></font>
+    row: 0
+    col: 6
+    width: 12
     height: 2
   - name: 'powered by'
     type: text
@@ -17,13 +24,6 @@
     row: 0
     col: 18
     width: 6
-    height: 2
-  - name: 'dashboard'
-    type: text
-    subtitle_text: <font size="5px"><font color="#408ef7"><b>Customer Profile</b></font>
-    row: 0
-    col: 8
-    width: 10
     height: 2
   - title: Current MRR
     name: Current MRR
@@ -59,25 +59,24 @@
       palette_id: santa_cruz
       options:
         steps: 5
-        __FILE: salesforce_mrr_demo/MRR_Salesforce_Overview.dashboard.lookml
-        __LINE_NUM: 138
+        __FILE: mrr/mrr_customer_detail.dashboard.lookml
+        __LINE_NUM: 61
     x_axis_gridlines: false
     y_axis_gridlines: true
     show_view_names: false
     y_axes: [{label: '', orientation: left, series: [{axisId: Customer Success - mrr.contract_line_mrr,
             id: Customer Success - mrr.contract_line_mrr, name: Customer Success,
-            __FILE: salesforce_mrr_demo/MRR_Salesforce_Overview.dashboard.lookml,
-            __LINE_NUM: 142}, {axisId: Keboola Add-ons - mrr.contract_line_mrr, id: Keboola
-              Add-ons - mrr.contract_line_mrr, name: Keboola Add-ons, __FILE: salesforce_mrr_demo/MRR_Salesforce_Overview.dashboard.lookml,
-            __LINE_NUM: 144}, {axisId: Keboola Subscription - mrr.contract_line_mrr,
+            __FILE: mrr/mrr_customer_detail.dashboard.lookml, __LINE_NUM: 67}, {axisId: Keboola
+              Add-ons - mrr.contract_line_mrr, id: Keboola Add-ons - mrr.contract_line_mrr,
+            name: Keboola Add-ons, __FILE: mrr/mrr_customer_detail.dashboard.lookml,
+            __LINE_NUM: 70}, {axisId: Keboola Subscription - mrr.contract_line_mrr,
             id: Keboola Subscription - mrr.contract_line_mrr, name: Keboola Subscription,
-            __FILE: salesforce_mrr_demo/MRR_Salesforce_Overview.dashboard.lookml,
-            __LINE_NUM: 145}, {axisId: Looker subscription - mrr.contract_line_mrr,
-            id: Looker subscription - mrr.contract_line_mrr, name: Looker subscription,
-            __FILE: salesforce_mrr_demo/MRR_Salesforce_Overview.dashboard.lookml,
-            __LINE_NUM: 147}], showLabels: false, showValues: true, unpinAxis: false,
-        tickDensity: default, tickDensityCustom: 5, type: linear, __FILE: salesforce_mrr_demo/MRR_Salesforce_Overview.dashboard.lookml,
-        __LINE_NUM: 142}]
+            __FILE: mrr/mrr_customer_detail.dashboard.lookml, __LINE_NUM: 72}, {axisId: Looker
+              subscription - mrr.contract_line_mrr, id: Looker subscription - mrr.contract_line_mrr,
+            name: Looker subscription, __FILE: mrr/mrr_customer_detail.dashboard.lookml,
+            __LINE_NUM: 75}], showLabels: false, showValues: true, unpinAxis: false,
+        tickDensity: default, tickDensityCustom: 5, type: linear, __FILE: mrr/mrr_customer_detail.dashboard.lookml,
+        __LINE_NUM: 67}]
     show_y_axis_labels: true
     show_y_axis_ticks: true
     y_axis_tick_density: default
@@ -161,20 +160,20 @@
       palette_id: santa_cruz
       options:
         steps: 5
-        __FILE: salesforce_mrr_demo/MRR_Salesforce_Overview.dashboard.lookml
-        __LINE_NUM: 452
+        __FILE: mrr/mrr_customer_detail.dashboard.lookml
+        __LINE_NUM: 163
     x_axis_gridlines: false
     y_axis_gridlines: true
     show_view_names: false
     y_axes: [{label: '', orientation: left, series: [{axisId: arr, id: arr, name: ARR,
-            __FILE: salesforce_mrr_demo/MRR_Salesforce_Overview.dashboard.lookml,
-            __LINE_NUM: 456}], showLabels: true, showValues: true, unpinAxis: false,
-        tickDensity: default, tickDensityCustom: 5, type: linear, __FILE: salesforce_mrr_demo/MRR_Salesforce_Overview.dashboard.lookml,
-        __LINE_NUM: 456}, {label: !!null '', orientation: right, series: [{axisId: yy_change,
-            id: yy_change, name: Y/Y Change, __FILE: salesforce_mrr_demo/MRR_Salesforce_Overview.dashboard.lookml,
-            __LINE_NUM: 459}], showLabels: true, showValues: true, unpinAxis: false,
-        tickDensity: default, tickDensityCustom: 5, type: linear, __FILE: salesforce_mrr_demo/MRR_Salesforce_Overview.dashboard.lookml,
-        __LINE_NUM: 458}]
+            __FILE: mrr/mrr_customer_detail.dashboard.lookml, __LINE_NUM: 169}], showLabels: true,
+        showValues: true, unpinAxis: false, tickDensity: default, tickDensityCustom: 5,
+        type: linear, __FILE: mrr/mrr_customer_detail.dashboard.lookml, __LINE_NUM: 169},
+      {label: !!null '', orientation: right, series: [{axisId: yy_change, id: yy_change,
+            name: Y/Y Change, __FILE: mrr/mrr_customer_detail.dashboard.lookml, __LINE_NUM: 173}],
+        showLabels: true, showValues: true, unpinAxis: false, tickDensity: default,
+        tickDensityCustom: 5, type: linear, __FILE: mrr/mrr_customer_detail.dashboard.lookml,
+        __LINE_NUM: 173}]
     show_y_axis_labels: true
     show_y_axis_ticks: true
     y_axis_tick_density: default
@@ -207,9 +206,9 @@
     hidden_fields: [mrr_aggregated.gross_mrr]
     listen:
       Customer: company.company
-    row: 11
-    col: 12
-    width: 12
+    row: 18
+    col: 0
+    width: 24
     height: 7
   - title: MRR Changes History
     name: MRR Changes History
@@ -227,17 +226,20 @@
       palette_id: santa_cruz
       options:
         steps: 5
-        __FILE: salesforce_mrr_demo/MRR_Salesforce_Overview.dashboard.lookml
-        __LINE_NUM: 79
+        __FILE: mrr/mrr_customer_detail.dashboard.lookml
+        __LINE_NUM: 229
     x_axis_gridlines: false
     y_axis_gridlines: true
     show_view_names: false
     y_axes: [{label: '', orientation: left, series: [{axisId: mrr_aggregated.gross_mrr_change,
-            id: mrr_aggregated.gross_mrr_change, name: Gross MRR Change}], showLabels: false,
-        showValues: false, unpinAxis: false, tickDensity: default, type: linear},
-      {label: '', orientation: right, series: [{axisId: mrr_aggregated.gross_mrr,
-            id: mrr_aggregated.gross_mrr, name: Gross MRR}], showLabels: false, showValues: false,
-        unpinAxis: false, tickDensity: default, tickDensityCustom: 5, type: linear}]
+            id: mrr_aggregated.gross_mrr_change, name: Gross MRR Change, __FILE: mrr/mrr_customer_detail.dashboard.lookml,
+            __LINE_NUM: 235}], showLabels: false, showValues: false, unpinAxis: false,
+        tickDensity: default, type: linear, __FILE: mrr/mrr_customer_detail.dashboard.lookml,
+        __LINE_NUM: 235}, {label: '', orientation: right, series: [{axisId: mrr_aggregated.gross_mrr,
+            id: mrr_aggregated.gross_mrr, name: Gross MRR, __FILE: mrr/mrr_customer_detail.dashboard.lookml,
+            __LINE_NUM: 238}], showLabels: false, showValues: false, unpinAxis: false,
+        tickDensity: default, tickDensityCustom: 5, type: linear, __FILE: mrr/mrr_customer_detail.dashboard.lookml,
+        __LINE_NUM: 238}]
     show_y_axis_labels: true
     show_y_axis_ticks: true
     y_axis_tick_density: default
@@ -282,7 +284,6 @@
     explore: mrr
     type: single_value
     fields: [mrr.contract_line_mrr]
-    filters: {}
     limit: 500
     column_limit: 50
     series_types: {}
@@ -316,14 +317,18 @@
       join_fields:
       - field_name: company.company
         source_field_name: company.company
+        __FILE: mrr/mrr_customer_detail.dashboard.lookml
+        __LINE_NUM: 317
     x_axis_gridlines: false
     y_axis_gridlines: true
     show_view_names: false
     y_axes: [{label: '', orientation: left, series: [{axisId: mrr_aggregated.gross_mrr,
-            id: mrr_aggregated.gross_mrr, name: MRR Aggregated}, {axisId: q1_mrr_aggregated.gross_mrr,
-            id: q1_mrr_aggregated.gross_mrr, name: MRR Aggregated}], showLabels: false,
-        showValues: false, unpinAxis: false, tickDensity: default, tickDensityCustom: 5,
-        type: linear}]
+            id: mrr_aggregated.gross_mrr, name: MRR Aggregated, __FILE: mrr/mrr_customer_detail.dashboard.lookml,
+            __LINE_NUM: 322}, {axisId: q1_mrr_aggregated.gross_mrr, id: q1_mrr_aggregated.gross_mrr,
+            name: MRR Aggregated, __FILE: mrr/mrr_customer_detail.dashboard.lookml,
+            __LINE_NUM: 323}], showLabels: false, showValues: false, unpinAxis: false,
+        tickDensity: default, tickDensityCustom: 5, type: linear, __FILE: mrr/mrr_customer_detail.dashboard.lookml,
+        __LINE_NUM: 322}]
     show_y_axis_labels: true
     show_y_axis_ticks: true
     y_axis_tick_density: default
@@ -354,6 +359,7 @@
     show_silhouette: false
     totals_color: "#808080"
     type: looker_column
+    column_limit: 50
     listen:
     -
     - Customer: company.company

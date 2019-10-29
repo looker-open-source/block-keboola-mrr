@@ -1,4 +1,4 @@
-- dashboard: mrr_salesforce_overview
+- dashboard: mrr_overview
   title: MRR Overview
   layout: newspaper
   elements:
@@ -77,25 +77,23 @@
       palette_id: santa_cruz
       options:
         steps: 5
-        __FILE: salesforce_mrr_demo/MRR_Salesforce_Overview.dashboard.lookml
-        __LINE_NUM: 138
+        __FILE: mrr/mrr_overview.dashboard.lookml
+        __LINE_NUM: 79
     x_axis_gridlines: false
     y_axis_gridlines: true
     show_view_names: false
     y_axes: [{label: '', orientation: left, series: [{axisId: Customer Success - mrr.contract_line_mrr,
             id: Customer Success - mrr.contract_line_mrr, name: Customer Success,
-            __FILE: salesforce_mrr_demo/MRR_Salesforce_Overview.dashboard.lookml,
-            __LINE_NUM: 142}, {axisId: Keboola Add-ons - mrr.contract_line_mrr, id: Keboola
-              Add-ons - mrr.contract_line_mrr, name: Keboola Add-ons, __FILE: salesforce_mrr_demo/MRR_Salesforce_Overview.dashboard.lookml,
-            __LINE_NUM: 144}, {axisId: Keboola Subscription - mrr.contract_line_mrr,
-            id: Keboola Subscription - mrr.contract_line_mrr, name: Keboola Subscription,
-            __FILE: salesforce_mrr_demo/MRR_Salesforce_Overview.dashboard.lookml,
-            __LINE_NUM: 145}, {axisId: Looker subscription - mrr.contract_line_mrr,
+            __FILE: mrr/mrr_overview.dashboard.lookml, __LINE_NUM: 85}, {axisId: Keboola
+              Add-ons - mrr.contract_line_mrr, id: Keboola Add-ons - mrr.contract_line_mrr,
+            name: Keboola Add-ons, __FILE: mrr/mrr_overview.dashboard.lookml, __LINE_NUM: 88},
+          {axisId: Keboola Subscription - mrr.contract_line_mrr, id: Keboola Subscription
+              - mrr.contract_line_mrr, name: Keboola Subscription, __FILE: mrr/mrr_overview.dashboard.lookml,
+            __LINE_NUM: 90}, {axisId: Looker subscription - mrr.contract_line_mrr,
             id: Looker subscription - mrr.contract_line_mrr, name: Looker subscription,
-            __FILE: salesforce_mrr_demo/MRR_Salesforce_Overview.dashboard.lookml,
-            __LINE_NUM: 147}], showLabels: false, showValues: true, unpinAxis: false,
-        tickDensity: default, tickDensityCustom: 5, type: linear, __FILE: salesforce_mrr_demo/MRR_Salesforce_Overview.dashboard.lookml,
-        __LINE_NUM: 142}]
+            __FILE: mrr/mrr_overview.dashboard.lookml, __LINE_NUM: 93}], showLabels: false,
+        showValues: true, unpinAxis: false, tickDensity: default, tickDensityCustom: 5,
+        type: linear, __FILE: mrr/mrr_overview.dashboard.lookml, __LINE_NUM: 85}]
     show_y_axis_labels: true
     show_y_axis_ticks: true
     y_axis_tick_density: default
@@ -145,24 +143,24 @@
       palette_id: santa_cruz
       options:
         steps: 5
-        __FILE: salesforce_mrr_demo/MRR_Salesforce_Overview.dashboard.lookml
-        __LINE_NUM: 199
+        __FILE: mrr/mrr_overview.dashboard.lookml
+        __LINE_NUM: 147
     x_axis_gridlines: false
     y_axis_gridlines: true
     show_view_names: false
     y_axes: [{label: '', orientation: left, series: [{axisId: 2015 - mrr.contract_line_mrr,
-            id: 2015 - mrr.contract_line_mrr, name: '2015', __FILE: salesforce_mrr_demo/MRR_Salesforce_Overview.dashboard.lookml,
-            __LINE_NUM: 203}, {axisId: 2016 - mrr.contract_line_mrr, id: 2016 - mrr.contract_line_mrr,
-            name: '2016', __FILE: salesforce_mrr_demo/MRR_Salesforce_Overview.dashboard.lookml,
-            __LINE_NUM: 204}, {axisId: 2017 - mrr.contract_line_mrr, id: 2017 - mrr.contract_line_mrr,
-            name: '2017', __FILE: salesforce_mrr_demo/MRR_Salesforce_Overview.dashboard.lookml,
-            __LINE_NUM: 205}, {axisId: 2018 - mrr.contract_line_mrr, id: 2018 - mrr.contract_line_mrr,
-            name: '2018', __FILE: salesforce_mrr_demo/MRR_Salesforce_Overview.dashboard.lookml,
-            __LINE_NUM: 206}, {axisId: 2019 - mrr.contract_line_mrr, id: 2019 - mrr.contract_line_mrr,
-            name: '2019', __FILE: salesforce_mrr_demo/MRR_Salesforce_Overview.dashboard.lookml,
-            __LINE_NUM: 207}], showLabels: false, showValues: true, unpinAxis: false,
-        tickDensity: default, tickDensityCustom: 5, type: linear, __FILE: salesforce_mrr_demo/MRR_Salesforce_Overview.dashboard.lookml,
-        __LINE_NUM: 203}]
+            id: 2015 - mrr.contract_line_mrr, name: '2015', __FILE: mrr/mrr_overview.dashboard.lookml,
+            __LINE_NUM: 153}, {axisId: 2016 - mrr.contract_line_mrr, id: 2016 - mrr.contract_line_mrr,
+            name: '2016', __FILE: mrr/mrr_overview.dashboard.lookml, __LINE_NUM: 155},
+          {axisId: 2017 - mrr.contract_line_mrr, id: 2017 - mrr.contract_line_mrr,
+            name: '2017', __FILE: mrr/mrr_overview.dashboard.lookml, __LINE_NUM: 157},
+          {axisId: 2018 - mrr.contract_line_mrr, id: 2018 - mrr.contract_line_mrr,
+            name: '2018', __FILE: mrr/mrr_overview.dashboard.lookml, __LINE_NUM: 159},
+          {axisId: 2019 - mrr.contract_line_mrr, id: 2019 - mrr.contract_line_mrr,
+            name: '2019', __FILE: mrr/mrr_overview.dashboard.lookml, __LINE_NUM: 161}],
+        showLabels: false, showValues: true, unpinAxis: false, tickDensity: default,
+        tickDensityCustom: 5, type: linear, __FILE: mrr/mrr_overview.dashboard.lookml,
+        __LINE_NUM: 153}]
     show_y_axis_labels: true
     show_y_axis_ticks: true
     y_axis_tick_density: default
@@ -212,28 +210,27 @@
       palette_id: santa_cruz
       options:
         steps: 5
-        __FILE: salesforce_mrr_demo/MRR_Salesforce_Overview.dashboard.lookml
-        __LINE_NUM: 258
+        __FILE: mrr/mrr_overview.dashboard.lookml
+        __LINE_NUM: 214
     x_axis_gridlines: false
     y_axis_gridlines: true
     show_view_names: false
     y_axes: [{label: '', orientation: left, series: [{axisId: "< 25000.0 - 0 - mrr_aggregated.customer_count",
-            id: "< 25000.0 - 0 - mrr_aggregated.customer_count", name: "< 25k", __FILE: salesforce_mrr_demo/MRR_Salesforce_Overview.dashboard.lookml,
-            __LINE_NUM: 262}, {axisId: ">= 25000.0 and < 50000.0 - 1 - mrr_aggregated.customer_count",
+            id: "< 25000.0 - 0 - mrr_aggregated.customer_count", name: "< 25k", __FILE: mrr/mrr_overview.dashboard.lookml,
+            __LINE_NUM: 220}, {axisId: ">= 25000.0 and < 50000.0 - 1 - mrr_aggregated.customer_count",
             id: ">= 25000.0 and < 50000.0 - 1 - mrr_aggregated.customer_count", name: ">=\
-              \ 25k and < 50k", __FILE: salesforce_mrr_demo/MRR_Salesforce_Overview.dashboard.lookml,
-            __LINE_NUM: 264}, {axisId: ">= 50000.0 and < 75000.0 - 2 - mrr_aggregated.customer_count",
+              \ 25k and < 50k", __FILE: mrr/mrr_overview.dashboard.lookml, __LINE_NUM: 222},
+          {axisId: ">= 50000.0 and < 75000.0 - 2 - mrr_aggregated.customer_count",
             id: ">= 50000.0 and < 75000.0 - 2 - mrr_aggregated.customer_count", name: ">=\
-              \ 50k and < 75k", __FILE: salesforce_mrr_demo/MRR_Salesforce_Overview.dashboard.lookml,
-            __LINE_NUM: 266}, {axisId: ">= 75000.0 and < 100000.0 - 3 - mrr_aggregated.customer_count",
+              \ 50k and < 75k", __FILE: mrr/mrr_overview.dashboard.lookml, __LINE_NUM: 225},
+          {axisId: ">= 75000.0 and < 100000.0 - 3 - mrr_aggregated.customer_count",
             id: ">= 75000.0 and < 100000.0 - 3 - mrr_aggregated.customer_count", name: ">=\
-              \ 75k and < 100k", __FILE: salesforce_mrr_demo/MRR_Salesforce_Overview.dashboard.lookml,
-            __LINE_NUM: 268}, {axisId: ">= 100000.0 - 4 - mrr_aggregated.customer_count",
-            id: ">= 100000.0 - 4 - mrr_aggregated.customer_count", name: ">= 100k",
-            __FILE: salesforce_mrr_demo/MRR_Salesforce_Overview.dashboard.lookml,
-            __LINE_NUM: 270}], showLabels: false, showValues: true, unpinAxis: false,
-        tickDensity: default, tickDensityCustom: 5, type: linear, __FILE: salesforce_mrr_demo/MRR_Salesforce_Overview.dashboard.lookml,
-        __LINE_NUM: 262}]
+              \ 75k and < 100k", __FILE: mrr/mrr_overview.dashboard.lookml, __LINE_NUM: 228},
+          {axisId: ">= 100000.0 - 4 - mrr_aggregated.customer_count", id: ">= 100000.0\
+              \ - 4 - mrr_aggregated.customer_count", name: ">= 100k", __FILE: mrr/mrr_overview.dashboard.lookml,
+            __LINE_NUM: 231}], showLabels: false, showValues: true, unpinAxis: false,
+        tickDensity: default, tickDensityCustom: 5, type: linear, __FILE: mrr/mrr_overview.dashboard.lookml,
+        __LINE_NUM: 220}]
     show_y_axis_labels: true
     show_y_axis_ticks: true
     y_axis_tick_density: default
@@ -285,27 +282,27 @@
       palette_id: santa_cruz
       options:
         steps: 5
-        __FILE: salesforce_mrr_demo/MRR_Salesforce_Overview.dashboard.lookml
-        __LINE_NUM: 324
+        __FILE: mrr/mrr_overview.dashboard.lookml
+        __LINE_NUM: 287
     x_axis_gridlines: false
     y_axis_gridlines: true
     show_view_names: false
     y_axes: [{label: '', orientation: left, series: [{axisId: "< 25000.0 - 0 - mrr_aggregated.gross_mrr",
-            id: "< 25000.0 - 0 - mrr_aggregated.gross_mrr", name: "< 25k", __FILE: salesforce_mrr_demo/MRR_Salesforce_Overview.dashboard.lookml,
-            __LINE_NUM: 328}, {axisId: ">= 25000.0 and < 50000.0 - 1 - mrr_aggregated.gross_mrr",
+            id: "< 25000.0 - 0 - mrr_aggregated.gross_mrr", name: "< 25k", __FILE: mrr/mrr_overview.dashboard.lookml,
+            __LINE_NUM: 293}, {axisId: ">= 25000.0 and < 50000.0 - 1 - mrr_aggregated.gross_mrr",
             id: ">= 25000.0 and < 50000.0 - 1 - mrr_aggregated.gross_mrr", name: ">=\
-              \ 25k and < 50k", __FILE: salesforce_mrr_demo/MRR_Salesforce_Overview.dashboard.lookml,
-            __LINE_NUM: 329}, {axisId: ">= 50000.0 and < 75000.0 - 2 - mrr_aggregated.gross_mrr",
-            id: ">= 50000.0 and < 75000.0 - 2 - mrr_aggregated.gross_mrr", name: ">=\
-              \ 50k and < 75k", __FILE: salesforce_mrr_demo/MRR_Salesforce_Overview.dashboard.lookml,
-            __LINE_NUM: 332}, {axisId: ">= 75000.0 and < 100000.0 - 3 - mrr_aggregated.gross_mrr",
-            id: ">= 75000.0 and < 100000.0 - 3 - mrr_aggregated.gross_mrr", name: ">=\
-              \ 75k and < 100k", __FILE: salesforce_mrr_demo/MRR_Salesforce_Overview.dashboard.lookml,
-            __LINE_NUM: 334}, {axisId: ">= 100000.0 - 4 - mrr_aggregated.gross_mrr",
-            id: ">= 100000.0 - 4 - mrr_aggregated.gross_mrr", name: ">= 100k", __FILE: salesforce_mrr_demo/MRR_Salesforce_Overview.dashboard.lookml,
-            __LINE_NUM: 336}], showLabels: false, showValues: true, unpinAxis: false,
-        tickDensity: default, tickDensityCustom: 5, type: linear, __FILE: salesforce_mrr_demo/MRR_Salesforce_Overview.dashboard.lookml,
-        __LINE_NUM: 328}]
+              \ 25k and < 50k", __FILE: mrr/mrr_overview.dashboard.lookml, __LINE_NUM: 295},
+          {axisId: ">= 50000.0 and < 75000.0 - 2 - mrr_aggregated.gross_mrr", id: ">=\
+              \ 50000.0 and < 75000.0 - 2 - mrr_aggregated.gross_mrr", name: ">= 50k\
+              \ and < 75k", __FILE: mrr/mrr_overview.dashboard.lookml, __LINE_NUM: 298},
+          {axisId: ">= 75000.0 and < 100000.0 - 3 - mrr_aggregated.gross_mrr", id: ">=\
+              \ 75000.0 and < 100000.0 - 3 - mrr_aggregated.gross_mrr", name: ">=\
+              \ 75k and < 100k", __FILE: mrr/mrr_overview.dashboard.lookml, __LINE_NUM: 301},
+          {axisId: ">= 100000.0 - 4 - mrr_aggregated.gross_mrr", id: ">= 100000.0\
+              \ - 4 - mrr_aggregated.gross_mrr", name: ">= 100k", __FILE: mrr/mrr_overview.dashboard.lookml,
+            __LINE_NUM: 304}], showLabels: false, showValues: true, unpinAxis: false,
+        tickDensity: default, tickDensityCustom: 5, type: linear, __FILE: mrr/mrr_overview.dashboard.lookml,
+        __LINE_NUM: 293}]
     show_y_axis_labels: true
     show_y_axis_ticks: true
     y_axis_tick_density: default
@@ -354,18 +351,18 @@
       palette_id: santa_cruz
       options:
         steps: 5
-        __FILE: salesforce_mrr_demo/MRR_Salesforce_Overview.dashboard.lookml
-        __LINE_NUM: 387
+        __FILE: mrr/mrr_overview.dashboard.lookml
+        __LINE_NUM: 356
     x_axis_gridlines: false
     y_axis_gridlines: true
     show_view_names: false
     y_axes: [{label: '', orientation: left, series: [{axisId: Churn - mrr_aggregated.count_change,
-            id: Churn - mrr_aggregated.count_change, name: Churn, __FILE: salesforce_mrr_demo/MRR_Salesforce_Overview.dashboard.lookml,
-            __LINE_NUM: 391}, {axisId: Net New - mrr_aggregated.count_change, id: Net
-              New - mrr_aggregated.count_change, name: Net New, __FILE: salesforce_mrr_demo/MRR_Salesforce_Overview.dashboard.lookml,
-            __LINE_NUM: 392}], showLabels: false, showValues: true, unpinAxis: false,
-        tickDensity: default, tickDensityCustom: 5, type: linear, __FILE: salesforce_mrr_demo/MRR_Salesforce_Overview.dashboard.lookml,
-        __LINE_NUM: 391}]
+            id: Churn - mrr_aggregated.count_change, name: Churn, __FILE: mrr/mrr_overview.dashboard.lookml,
+            __LINE_NUM: 362}, {axisId: Net New - mrr_aggregated.count_change, id: Net
+              New - mrr_aggregated.count_change, name: Net New, __FILE: mrr/mrr_overview.dashboard.lookml,
+            __LINE_NUM: 364}], showLabels: false, showValues: true, unpinAxis: false,
+        tickDensity: default, tickDensityCustom: 5, type: linear, __FILE: mrr/mrr_overview.dashboard.lookml,
+        __LINE_NUM: 362}]
     show_y_axis_labels: true
     show_y_axis_ticks: true
     y_axis_tick_density: default
@@ -423,20 +420,20 @@
       palette_id: santa_cruz
       options:
         steps: 5
-        __FILE: salesforce_mrr_demo/MRR_Salesforce_Overview.dashboard.lookml
-        __LINE_NUM: 452
+        __FILE: mrr/mrr_overview.dashboard.lookml
+        __LINE_NUM: 425
     x_axis_gridlines: false
     y_axis_gridlines: true
     show_view_names: false
     y_axes: [{label: '', orientation: left, series: [{axisId: arr, id: arr, name: ARR,
-            __FILE: salesforce_mrr_demo/MRR_Salesforce_Overview.dashboard.lookml,
-            __LINE_NUM: 456}], showLabels: true, showValues: true, unpinAxis: false,
-        tickDensity: default, tickDensityCustom: 5, type: linear, __FILE: salesforce_mrr_demo/MRR_Salesforce_Overview.dashboard.lookml,
-        __LINE_NUM: 456}, {label: !!null '', orientation: right, series: [{axisId: yy_change,
-            id: yy_change, name: Y/Y Change, __FILE: salesforce_mrr_demo/MRR_Salesforce_Overview.dashboard.lookml,
-            __LINE_NUM: 459}], showLabels: true, showValues: true, unpinAxis: false,
-        tickDensity: default, tickDensityCustom: 5, type: linear, __FILE: salesforce_mrr_demo/MRR_Salesforce_Overview.dashboard.lookml,
-        __LINE_NUM: 458}]
+            __FILE: mrr/mrr_overview.dashboard.lookml, __LINE_NUM: 431}], showLabels: true,
+        showValues: true, unpinAxis: false, tickDensity: default, tickDensityCustom: 5,
+        type: linear, __FILE: mrr/mrr_overview.dashboard.lookml, __LINE_NUM: 431},
+      {label: !!null '', orientation: right, series: [{axisId: yy_change, id: yy_change,
+            name: Y/Y Change, __FILE: mrr/mrr_overview.dashboard.lookml, __LINE_NUM: 435}],
+        showLabels: true, showValues: true, unpinAxis: false, tickDensity: default,
+        tickDensityCustom: 5, type: linear, __FILE: mrr/mrr_overview.dashboard.lookml,
+        __LINE_NUM: 435}]
     show_y_axis_labels: true
     show_y_axis_ticks: true
     y_axis_tick_density: default
@@ -478,14 +475,14 @@
     subtitle_text: <font size="5px"><font color="#408ef7"><b>MRR</b></font>
     row: 0
     col: 0
-    width: 8
+    width: 6
     height: 2
   - name: 'dashboard'
     type: text
     subtitle_text: <font size="5px"><font color="#408ef7"><b>Overview</b></font>
     row: 0
-    col: 8
-    width: 10
+    col: 6
+    width: 12
     height: 2
   - name: 'powered by'
     type: text
@@ -513,22 +510,22 @@
       palette_id: santa_cruz
       options:
         steps: 5
-        __FILE: salesforce_mrr_demo/MRR_Salesforce_Overview.dashboard.lookml
-        __LINE_NUM: 79
+        __FILE: mrr/mrr_overview.dashboard.lookml
+        __LINE_NUM: 515
     x_axis_gridlines: false
     y_axis_gridlines: true
     show_view_names: false
     y_axes: [{label: '', orientation: left, series: [{axisId: Churn - mrr_aggregated.gross_mrr_change,
-            id: Churn - mrr_aggregated.gross_mrr_change, name: Churn, __FILE: salesforce_mrr_demo/MRR_Salesforce_Overview.dashboard.lookml,
-            __LINE_NUM: 83}, {axisId: Downgrade - mrr_aggregated.gross_mrr_change,
-            id: Downgrade - mrr_aggregated.gross_mrr_change, name: Downgrade, __FILE: salesforce_mrr_demo/MRR_Salesforce_Overview.dashboard.lookml,
-            __LINE_NUM: 84}, {axisId: Net New - mrr_aggregated.gross_mrr_change, id: Net
-              New - mrr_aggregated.gross_mrr_change, name: Net New, __FILE: salesforce_mrr_demo/MRR_Salesforce_Overview.dashboard.lookml,
-            __LINE_NUM: 86}, {axisId: Upgrade - mrr_aggregated.gross_mrr_change, id: Upgrade
-              - mrr_aggregated.gross_mrr_change, name: Upgrade, __FILE: salesforce_mrr_demo/MRR_Salesforce_Overview.dashboard.lookml,
-            __LINE_NUM: 87}], showLabels: false, showValues: true, unpinAxis: false,
-        tickDensity: default, tickDensityCustom: 5, type: linear, __FILE: salesforce_mrr_demo/MRR_Salesforce_Overview.dashboard.lookml,
-        __LINE_NUM: 83}]
+            id: Churn - mrr_aggregated.gross_mrr_change, name: Churn, __FILE: mrr/mrr_overview.dashboard.lookml,
+            __LINE_NUM: 521}, {axisId: Downgrade - mrr_aggregated.gross_mrr_change,
+            id: Downgrade - mrr_aggregated.gross_mrr_change, name: Downgrade, __FILE: mrr/mrr_overview.dashboard.lookml,
+            __LINE_NUM: 523}, {axisId: Net New - mrr_aggregated.gross_mrr_change,
+            id: Net New - mrr_aggregated.gross_mrr_change, name: Net New, __FILE: mrr/mrr_overview.dashboard.lookml,
+            __LINE_NUM: 525}, {axisId: Upgrade - mrr_aggregated.gross_mrr_change,
+            id: Upgrade - mrr_aggregated.gross_mrr_change, name: Upgrade, __FILE: mrr/mrr_overview.dashboard.lookml,
+            __LINE_NUM: 527}], showLabels: false, showValues: true, unpinAxis: false,
+        tickDensity: default, tickDensityCustom: 5, type: linear, __FILE: mrr/mrr_overview.dashboard.lookml,
+        __LINE_NUM: 521}]
     show_y_axis_labels: true
     show_y_axis_ticks: true
     y_axis_tick_density: default
