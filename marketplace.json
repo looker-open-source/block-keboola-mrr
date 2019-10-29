@@ -1,0 +1,35 @@
+{
+  "label": "MRR",
+  "category_label": "Models",
+  "branding": {
+    "image_uri": "https://www.keboola.com/data/poweredByKeboola.png",
+    "tagline": "Keboola’s MRR Block empowers your sales leadership to quickly analyze recurring revenue, value of the customer or product performance. The analysis shows customers contracts in a calendar format that makes it simple to track metrics such as churn, retention, net new and additional sales."
+  },
+
+  "constants": {
+    "CONNECTION": {
+      "label": "Connection Name",
+      "value_constraint": "connection"
+    },
+    "SCHEMA_NAME": {
+      "label": "Schema Name"
+    },
+    "CONFIG_PROJECT_NAME": {
+      "label": "Config Project Name"
+    }
+  },
+  "models": [
+    {
+      "name": "block-keboola-mrr",
+      "connection_constant": "CONNECTION"
+    }
+  ],
+  "auxiliary_projects": [
+    {
+      "git_uri": "",
+      "git_ref": "",
+      "label": "MRR Config",
+      "constant_name": "CONFIG_PROJECT_NAME"
+    }
+  ]
+}

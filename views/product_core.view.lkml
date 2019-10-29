@@ -1,5 +1,11 @@
+include: "//@{CONFIG_PROJECT_NAME}/views/product.view"
+
 view: product {
-  sql_table_name: PRODUCT ;;
+  extends: [product_config]
+}
+
+view: product_core {
+  sql_table_name: @{SCHEMA_NAME}.PRODUCT ;;
 
   dimension: product_id {
     label: "Product ID"

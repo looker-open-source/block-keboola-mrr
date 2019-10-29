@@ -27,7 +27,7 @@
     height: 2
   - title: Current MRR
     name: Current MRR
-    model: mrr
+    model: block_keboola_mrr
     explore: mrr
     type: single_value
     fields: [mrr.contract_line_mrr]
@@ -43,7 +43,7 @@
     height: 3
   - title: MRR by Product Family
     name: MRR by Product Family
-    model: mrr
+    model: block_keboola_mrr
     explore: mrr
     type: looker_area
     fields: [mrr.contract_line_mrr, mrr.date_month, product.product_family]
@@ -112,7 +112,7 @@
     height: 7
   - title: Annualized
     name: Annualized
-    model: mrr
+    model: block_keboola_mrr
     explore: mrr
     type: single_value
     fields: [mrr.contract_line_mrr]
@@ -140,7 +140,7 @@
     height: 3
   - title: Y/Y ARR Change
     name: Y/Y ARR Change
-    model: mrr
+    model: block_keboola_mrr
     explore: mrr_aggregated
     type: looker_column
     fields: [mrr_aggregated.gross_mrr, mrr_aggregated.date_year]
@@ -212,7 +212,7 @@
     height: 7
   - title: MRR Changes History
     name: MRR Changes History
-    model: mrr
+    model: block_keboola_mrr
     explore: mrr_aggregated
     type: looker_column
     fields: [mrr_aggregated.gross_mrr_change, mrr_aggregated.date_month, mrr_aggregated.gross_mrr]
@@ -280,7 +280,7 @@
     height: 6
   - title: LTV (Contracted)
     name: LTV (Contracted)
-    model: mrr
+    model: block_keboola_mrr
     explore: mrr
     type: single_value
     fields: [mrr.contract_line_mrr]
@@ -296,7 +296,7 @@
   - name: Customer Position by Current MRR
     title: Customer Position by Current MRR
     merged_queries:
-    - model: mrr
+    - model: block_keboola_mrr
       explore: mrr_aggregated
       type: table
       fields: [company.company, mrr_aggregated.gross_mrr]
@@ -306,7 +306,7 @@
       limit: 500
       query_timezone: America/Los_Angeles
       join_fields: []
-    - model: mrr
+    - model: block_keboola_mrr
       explore: mrr_aggregated
       type: table
       fields: [company.company, mrr_aggregated.gross_mrr]
@@ -369,7 +369,7 @@
     height: 6
   - title: LTV up to date
     name: LTV up to date
-    model: mrr
+    model: block_keboola_mrr
     explore: mrr
     type: single_value
     fields: [mrr.contract_line_mrr]
@@ -391,7 +391,7 @@
     default_value: ''
     allow_multiple_values: false
     required: true
-    model: mrr
+    model: block_keboola_mrr
     explore: mrr_aggregated
     listens_to_filters: []
     field: company.company

@@ -1,5 +1,11 @@
+include: "//@{CONFIG_PROJECT_NAME}/views/company.view"
+
 view: company {
-  sql_table_name: COMPANY ;;
+  extends: [company_config]
+}
+
+view: company_core {
+  sql_table_name: @{SCHEMA_NAME}.COMPANY ;;
 
   dimension: company_id {
     label: "Company ID"
@@ -8,17 +14,9 @@ view: company {
     sql: ${TABLE}."COMPANY_ID" ;;
   }
 
-  dimension: company_url {
-    label: "Company URL"
-    type: string
-    # hidden: yes
-    sql:  'https://@{domain}/lightning/r/Account' || ${company_id} || '/view' ;;
-  }
-
   dimension: company {
     type: string
     sql: ${TABLE}."COMPANY" ;;
-    html: <a href={{company_url}} target="_blank"><font color="blue">{{ value }}</font></a> ;;
   }
 
   dimension_group: date_created {

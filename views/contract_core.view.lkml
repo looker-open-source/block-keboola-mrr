@@ -1,18 +1,17 @@
+include: "//@{CONFIG_PROJECT_NAME}/views/contract.view"
+
 view: contract {
-  sql_table_name: CONTRACT ;;
+  extends: [contract_config]
+}
+
+view: contract_core {
+  sql_table_name: @{SCHEMA_NAME}.CONTRACT ;;
 
   dimension: contract_id {
     label: "Contract ID"
     primary_key: yes
     type: string
     sql: ${TABLE}."CONTRACT_ID" ;;
-    html: <a href={{contract_url}} target="_blank"><font color="blue">{{ value }}</font></a> ;;
-  }
-
-  dimension: contract_url {
-    label: "Contract URL"
-    type: string
-    sql:  'https://@{domain}/lightning/r/Order' || ${contract_id} || '/view' ;;
   }
 
   dimension: company_id {
@@ -54,7 +53,6 @@ view: contract {
   dimension: contract_number {
     type: string
     sql: ${TABLE}."CONTRACT_NUMBER" ;;
-    html: <a href={{contract_url}} target="_blank"><font color="blue">{{ value }}</font></a> ;;
   }
 
   dimension_group: contract_start {

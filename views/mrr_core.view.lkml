@@ -1,5 +1,11 @@
+include: "//@{CONFIG_PROJECT_NAME}/views/mrr.view"
+
 view: mrr {
-  sql_table_name: MRR ;;
+  extends: [mrr_config]
+}
+
+view: mrr_core {
+  sql_table_name: @{SCHEMA_NAME}.MRR ;;
   label: "MRR"
 
   set: company_contract_employee {
