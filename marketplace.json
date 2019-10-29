@@ -1,5 +1,5 @@
 {
-  "label": "MRR",
+  "label": "MRR by Keboola",
   "category_label": "Models",
   "branding": {
     "image_uri": "https://www.keboola.com/data/poweredByKeboola.png",
@@ -28,7 +28,7 @@
     {
       "git_uri": "",
       "git_ref": "",
-      "label": "MRR Config",
+      "label": "MRR by Keboola Config",
       "constant_name": "CONFIG_PROJECT_NAME"
     }
   ]
