@@ -20,7 +20,7 @@
   },
   "models": [
     {
-      "name": "block-keboola-mrr",
+      "name": "block_keboola_mrr",
       "connection_constant": "CONNECTION"
     }
   ],
