@@ -472,7 +472,7 @@
   - name: 'scaffold'
     type: text
     title_text: ''
-    subtitle_text: <font size="5px"><font color="#408ef7"><b>MRR</b></font>
+    subtitle_text: <font size="5px"><font color="#408ef7"><b>Subscription Revenue</b></font>
     row: 0
     col: 0
     width: 6
