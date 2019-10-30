@@ -8,7 +8,7 @@ constant: CONFIG_PROJECT_NAME {
 }
 
 constant: CONNECTION {
-  value: "keboola_block_mrr_salesforce"
+  value: "keboola_block_mrr"
   export: override_required
 }
 
