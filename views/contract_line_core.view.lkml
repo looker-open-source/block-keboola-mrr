@@ -28,12 +28,6 @@ view: contract_line_core {
     sql: ${TABLE}."CONTRACT_ID" ;;
   }
 
-  dimension: opportunity_id {
-    type: string
-    hidden: yes
-    sql: ${TABLE}."OPPORTUNITY_ID" ;;
-  }
-
   dimension: product_id {
     type: string
     hidden: yes
