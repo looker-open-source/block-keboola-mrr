@@ -31,6 +31,11 @@ view: contract_core {
     sql: ${TABLE}."CONTRACT" ;;
   }
 
+  dimension: status {
+    type: string
+    sql: ${TABLE}."STATUS" ;;
+  }
+
   dimension_group: contract_end {
     type: time
     timeframes: [
