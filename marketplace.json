@@ -3,7 +3,7 @@
   "category_label": "Models",
   "branding": {
     "image_uri": "https://www.keboola.com/data/poweredByKeboola.png",
-    "tagline": "Keboola’s MRR Block empowers your sales leadership to quickly analyze recurring revenue, value of the customer or product performance. The analysis shows customers contracts in a calendar format that makes it simple to track metrics such as churn, retention, net new and additional sales."
+    "tagline": "Out-of-the-box analysis for Churn, Retention and LTV."
   },
 
   "constants": {
@@ -26,8 +26,8 @@
   ],
   "auxiliary_projects": [
     {
-      "git_uri": "",
-      "git_ref": "",
+      "git_uri": "git://github.com/llooker/block-keboola-mrr-config.git",
+      "git_ref": "2a9d1769aded191d10d0f31d30751cc906b9d493",
       "label": "MRR by Keboola Config",
       "constant_name": "CONFIG_PROJECT_NAME"
     }

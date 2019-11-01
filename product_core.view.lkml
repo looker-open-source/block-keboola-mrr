@@ -1,4 +1,4 @@
-include: "//@{CONFIG_PROJECT_NAME}/views/product.view"
+include: "//@{CONFIG_PROJECT_NAME}/product.view"
 
 view: product {
   extends: [product_config]

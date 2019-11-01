@@ -1,4 +1,4 @@
-include: "//@{CONFIG_PROJECT_NAME}/views/contract.view"
+include: "//@{CONFIG_PROJECT_NAME}/contract.view"
 
 view: contract {
   extends: [contract_config]

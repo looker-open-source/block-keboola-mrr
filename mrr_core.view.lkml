@@ -1,4 +1,4 @@
-include: "//@{CONFIG_PROJECT_NAME}/views/mrr.view"
+include: "//@{CONFIG_PROJECT_NAME}/mrr.view"
 
 view: mrr {
   extends: [mrr_config]
